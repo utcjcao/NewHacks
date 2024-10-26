@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import SuggestedInfo from "./components/SuggestedInfo";
-import UserForm from "./components/UserForm";
+import RegistrationPage from "./pages/RegistrationPage";
 
 function App() {
   const [data, setData] = useState(null);
@@ -16,7 +16,7 @@ function App() {
       {data ? (
         <SuggestedInfo info={data} />
       ) : (
-        <UserForm handleSubmit={handleSubmit} />
+        <RegistrationPage></RegistrationPage>
       )}
     </>
   );
