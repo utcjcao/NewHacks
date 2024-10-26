@@ -10,6 +10,7 @@ const RegistrationPage = ({ formValues, setFormValues, handleSubmit }) => {
       ...formValues,
       [name]: value,
     });
+    setFormValues((prevForm) => ({ ...prevForm, [name]: value }));
   };
 
   //   // Handler for form submission
@@ -20,20 +21,16 @@ const RegistrationPage = ({ formValues, setFormValues, handleSubmit }) => {
   //   };
 
   return (
-    <div className="page-container">
-      <div className="form-container">
-        <h1>Registration Form</h1>
-        <form onSubmit={handleSubmit}>
-          <RegistrationFields values={formValues} onChange={handleChange} />
+    <div className="registration-page-container">
+      <h1>Registration Form</h1>
+      <form onSubmit={handleSubmit}>
+        <RegistrationFields values={formValues} onChange={handleChange} />
 
-          {/* Additional Button to Submit */}
-          <button type="submit" className="submit-button">
-            Submit
-          </button>
-        </form>
-      </div>
-
-      <div className="sidebar"></div>
+        {/* Additional Button to Submit */}
+        <button type="submit" className="submit-button">
+          Submit
+        </button>
+      </form>
     </div>
   );
 };

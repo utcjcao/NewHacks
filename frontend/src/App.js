@@ -15,12 +15,14 @@ function App() {
   // const navigate = useNavigate();
   const [onInfo, setOnInfo] = useState(false);
   const [formValues, setFormValues] = useState({
-    pets: "",
-    babies: "",
     county: "",
     familySize: "",
     houseType: "",
     travelMeans: "",
+    youngInfants: "",
+    childCount: "",
+    pets: "",
+    petCount: "",
   });
 
   // Handler for form submission
