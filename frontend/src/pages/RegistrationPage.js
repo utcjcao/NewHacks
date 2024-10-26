@@ -9,7 +9,12 @@ const RegistrationPage = () => {
     familySize: "",
     houseType: "",
     travelMeans: "",
+    youngInfants: "",
+    childCount: "",
+    pets: "",
+    petCount: "",
     medicalInfo: "",
+    
   });
 
   // Handler to update form values on input change
@@ -32,7 +37,7 @@ const RegistrationPage = () => {
     <div className="registration-page-container">
       <h1>Registration Form</h1>
       <form onSubmit={handleSubmit}>
-        <RegistrationFields values={formValues} handleChange={handleChange} />
+        <RegistrationFields values={formValues} onChange={handleChange} />
 
         {/* Additional Button to Submit */}
         <button type="submit" className="submit-button">

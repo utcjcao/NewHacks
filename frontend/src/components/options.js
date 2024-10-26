@@ -69,8 +69,10 @@ export const counties = [
     "Washington"
 ];
 
-export const familySizes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+export const familySizes = ["1", "2", "3", "4", "5+"];
 
 export const houseTypes = ["Single Family", "Multi Family", "Apartment"];
-
-export const travelMeans = ["Car", "Bus", "Bicycle", "Walk", "Other"];
+export const travelMeans = ["Car", "Bus", "Bike", "Walking"];
+export const yesNoOptions = ["Yes", "No"];
+export const childCountOptions = ["1", "2", "3", "4", "5+"];
+export const petCountOptions = ["1", "2", "3", "4", "5+"];
