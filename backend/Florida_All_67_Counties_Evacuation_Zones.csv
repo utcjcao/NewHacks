@@ -1,0 +1,68 @@
+County,Evacuation Zone,Zone Description,Evacuation Likelihood
+Alachua,Zone D,"Moderate risk, evacuated as needed.",No
+Baker,Zone C,"Moderate risk, evacuated later.",No
+Bay,Zone A,"High risk coastal area, generally evacuated early.",Yes
+Bradford,Zone E,"Lower risk, not typically evacuated.",No
+Brevard,Zone A,"High risk, likely evacuated early.",Yes
+Broward,Zone A,"High risk coastal area, generally evacuated early.",Yes
+Calhoun,Zone C,"Moderate risk, evacuated as needed.",No
+Charlotte,Zone A,"High risk coastal area, generally evacuated early.",Yes
+Citrus,Zone B,"Moderate risk, evacuated later.",No
+Clay,North Fork Black Creek,"Special flood-prone area, likely evacuated early.",Yes
+Collier,Zone F,"Less vulnerable, likely evacuated later in an emergency.",No
+Columbia,Zone D,"Lower risk, evacuated later in severe cases.",No
+DeSoto,Zone D,"Lower risk, evacuated later in severe cases.",No
+Dixie,Zone C,"Moderate risk, evacuated as needed.",No
+Duval,Zone F,"Less vulnerable, likely evacuated later in an emergency.",No
+Escambia,Zone A,"High risk, coastal area, evacuated early.",Yes
+Flagler,Potential Hurricane Evacuation Zone,"Flagler's potential hurricane evacuation area, affected by severe storms.",Yes
+Franklin,Zone A,"High risk, coastal area, evacuated early.",Yes
+Gadsden,Zone D,"Lower risk, evacuated as needed.",No
+Gilchrist,Zone D,"Moderate risk, evacuated as needed.",No
+Glades,Zone E,"Lower risk, not typically evacuated.",No
+Gulf,Zone B,"Moderate risk, evacuated later.",No
+Hamilton,Zone D,"Lower risk, not typically evacuated.",No
+Hardee,Zone D,"Moderate risk, evacuated later.",No
+Hendry,Zone E,"Lower risk, not typically evacuated.",No
+Hernando,Zone C,"Lower risk, evacuated later in severe cases.",No
+Highlands,Zone D,"Lower risk, evacuated later in severe cases.",No
+Hillsborough,Zone B,"Moderate risk coastal area, evacuated as needed.",Yes
+Holmes,Zone E,"Lower risk, not typically evacuated.",No
+Indian River,Zone A,"High risk, likely evacuated early.",Yes
+Jackson,Zone D,"Lower risk, not typically evacuated.",No
+Jefferson,Zone C,"Lower risk, evacuated later in severe cases.",No
+Lafayette,Zone E,"Lower risk, not typically evacuated.",No
+Lake,Zone E,"Lower risk, evacuated later in severe cases.",No
+Lee,Zone A,"High risk coastal area, generally evacuated early.",Yes
+Leon,Zone C,"Lower risk, evacuated as needed.",No
+Levy,Zone D,"Lower risk, evacuated later in severe cases.",No
+Liberty,Zone E,"Lower risk, not typically evacuated.",No
+Madison,Zone D,"Lower risk, not typically evacuated.",No
+Manatee,Zone C,"Moderate risk, evacuated later.",No
+Marion,Zone D,"Moderate risk, evacuated as needed.",No
+Martin,Zone A,"Moderate risk, evacuated as needed.",No
+Miami-Dade,Zone A,"Highest risk coastal area, first to evacuate.",Yes
+Monroe,Zone AB,Highly vulnerable coastal areas likely to evacuate first.,Yes
+Nassau,Zone F,"Less vulnerable, likely evacuated later in an emergency.",No
+Okaloosa,Zone A,"High risk, coastal area, evacuated early.",Yes
+Okeechobee,Zone E,"Lower risk, evacuated later in severe cases.",No
+Orange,Zone D,"Moderate risk, evacuated as needed.",No
+Osceola,Zone A,"High risk, likely evacuated early.",Yes
+Palm Beach,Zone L,"Special zone designation, potentially affected by high-impact storms.",Yes
+Pasco,Zone B,"Moderate risk, evacuated as needed.",No
+Pinellas,Mobile Home,"Mobile home residents at higher risk, typically evacuated early.",Yes
+Polk,Zone C,"Moderate risk, evacuated later.",No
+Putnam,Zone E,"Lower risk, evacuated later in severe cases.",No
+Santa Rosa,Zone A,"High risk, coastal area, evacuated early.",Yes
+Sarasota,Zone C,"Moderate risk, evacuated later.",No
+Seminole,Zone D,"Moderate risk, evacuated as needed.",No
+St. Johns,Zone F,"Less vulnerable, likely evacuated later in an emergency.",No
+St. Lucie,Zone A,"High risk, likely evacuated early.",Yes
+Sumter,Zone E,"Lower risk, evacuated later in severe cases.",No
+Suwannee,Zone D,"Moderate risk, evacuated later.",No
+Taylor,Zone C,"Lower risk, evacuated later in severe cases.",No
+Union,Zone E,"Lower risk, not typically evacuated.",No
+Volusia,Zone BC,"Moderate vulnerability, higher risk for coastal storm surges.",Yes
+Wakulla,Zone B,"Moderate risk, evacuated as needed.",No
+Walton,Zone B,"Moderate risk, evacuated as needed.",No
+Washington,Zone D,"Lower risk, not typically evacuated.",No
