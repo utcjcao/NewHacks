@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import React, { useState } from "react";
 import RegistrationPage from "./pages/RegistrationPage";
-import SuggestedPage from "./pages/SuggestionPage";
+import SuggestionPage from "./pages/SuggestionPage";
 import Layout from "./layouts/Layout";
 
 function App() {
@@ -21,7 +21,6 @@ function App() {
     familySize: "",
     houseType: "",
     travelMeans: "",
-    medicalInfo: "",
   });
 
   // Handler for form submission
@@ -41,7 +40,7 @@ function App() {
             index
             element={
               onInfo ? (
-                <SuggestedPage setOnInfo={setOnInfo}></SuggestedPage>
+                <SuggestionPage setOnInfo={setOnInfo}></SuggestionPage>
               ) : (
                 <RegistrationPage
                   formValues={formValues}

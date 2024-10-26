@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as options from "./options";
 import SelectInput from "./SelectInput";
-import TextInput from "./TextInput";
 
 const RegistrationFields = ({ values, onChange }) => {
   const [mobileView, setMobileView] = useState(false);
@@ -150,16 +149,6 @@ const RegistrationFields = ({ values, onChange }) => {
             ))}
           </SelectInput>
         )}
-
-        <TextInput
-          id="medicalInfo"
-          name="medicalInfo"
-          type="text"
-          label="Medical Info"
-          placeholder="Enter any medical information"
-          value={values.medicalInfo}
-          onChange={onChange}
-        />
       </div>
     </>
   );
