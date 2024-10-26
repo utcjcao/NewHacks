@@ -1,68 +1,68 @@
-County,Evacuation Zone,Zone Description,Evacuation Likelihood
-Alachua,Zone D,"Moderate risk, evacuated as needed.",No
-Baker,Zone C,"Moderate risk, evacuated later.",No
-Bay,Zone A,"High risk coastal area, generally evacuated early.",Yes
-Bradford,Zone E,"Lower risk, not typically evacuated.",No
-Brevard,Zone A,"High risk, likely evacuated early.",Yes
-Broward,Zone A,"High risk coastal area, generally evacuated early.",Yes
-Calhoun,Zone C,"Moderate risk, evacuated as needed.",No
-Charlotte,Zone A,"High risk coastal area, generally evacuated early.",Yes
-Citrus,Zone B,"Moderate risk, evacuated later.",No
-Clay,North Fork Black Creek,"Special flood-prone area, likely evacuated early.",Yes
-Collier,Zone F,"Less vulnerable, likely evacuated later in an emergency.",No
-Columbia,Zone D,"Lower risk, evacuated later in severe cases.",No
-DeSoto,Zone D,"Lower risk, evacuated later in severe cases.",No
-Dixie,Zone C,"Moderate risk, evacuated as needed.",No
-Duval,Zone F,"Less vulnerable, likely evacuated later in an emergency.",No
-Escambia,Zone A,"High risk, coastal area, evacuated early.",Yes
-Flagler,Potential Hurricane Evacuation Zone,"Flagler's potential hurricane evacuation area, affected by severe storms.",Yes
-Franklin,Zone A,"High risk, coastal area, evacuated early.",Yes
-Gadsden,Zone D,"Lower risk, evacuated as needed.",No
-Gilchrist,Zone D,"Moderate risk, evacuated as needed.",No
-Glades,Zone E,"Lower risk, not typically evacuated.",No
-Gulf,Zone B,"Moderate risk, evacuated later.",No
-Hamilton,Zone D,"Lower risk, not typically evacuated.",No
-Hardee,Zone D,"Moderate risk, evacuated later.",No
-Hendry,Zone E,"Lower risk, not typically evacuated.",No
-Hernando,Zone C,"Lower risk, evacuated later in severe cases.",No
-Highlands,Zone D,"Lower risk, evacuated later in severe cases.",No
-Hillsborough,Zone B,"Moderate risk coastal area, evacuated as needed.",Yes
-Holmes,Zone E,"Lower risk, not typically evacuated.",No
-Indian River,Zone A,"High risk, likely evacuated early.",Yes
-Jackson,Zone D,"Lower risk, not typically evacuated.",No
-Jefferson,Zone C,"Lower risk, evacuated later in severe cases.",No
-Lafayette,Zone E,"Lower risk, not typically evacuated.",No
-Lake,Zone E,"Lower risk, evacuated later in severe cases.",No
-Lee,Zone A,"High risk coastal area, generally evacuated early.",Yes
-Leon,Zone C,"Lower risk, evacuated as needed.",No
-Levy,Zone D,"Lower risk, evacuated later in severe cases.",No
-Liberty,Zone E,"Lower risk, not typically evacuated.",No
-Madison,Zone D,"Lower risk, not typically evacuated.",No
-Manatee,Zone C,"Moderate risk, evacuated later.",No
-Marion,Zone D,"Moderate risk, evacuated as needed.",No
-Martin,Zone A,"Moderate risk, evacuated as needed.",No
-Miami-Dade,Zone A,"Highest risk coastal area, first to evacuate.",Yes
-Monroe,Zone AB,Highly vulnerable coastal areas likely to evacuate first.,Yes
-Nassau,Zone F,"Less vulnerable, likely evacuated later in an emergency.",No
-Okaloosa,Zone A,"High risk, coastal area, evacuated early.",Yes
-Okeechobee,Zone E,"Lower risk, evacuated later in severe cases.",No
-Orange,Zone D,"Moderate risk, evacuated as needed.",No
-Osceola,Zone A,"High risk, likely evacuated early.",Yes
-Palm Beach,Zone L,"Special zone designation, potentially affected by high-impact storms.",Yes
-Pasco,Zone B,"Moderate risk, evacuated as needed.",No
-Pinellas,Mobile Home,"Mobile home residents at higher risk, typically evacuated early.",Yes
-Polk,Zone C,"Moderate risk, evacuated later.",No
-Putnam,Zone E,"Lower risk, evacuated later in severe cases.",No
-Santa Rosa,Zone A,"High risk, coastal area, evacuated early.",Yes
-Sarasota,Zone C,"Moderate risk, evacuated later.",No
-Seminole,Zone D,"Moderate risk, evacuated as needed.",No
-St. Johns,Zone F,"Less vulnerable, likely evacuated later in an emergency.",No
-St. Lucie,Zone A,"High risk, likely evacuated early.",Yes
-Sumter,Zone E,"Lower risk, evacuated later in severe cases.",No
-Suwannee,Zone D,"Moderate risk, evacuated later.",No
-Taylor,Zone C,"Lower risk, evacuated later in severe cases.",No
-Union,Zone E,"Lower risk, not typically evacuated.",No
-Volusia,Zone BC,"Moderate vulnerability, higher risk for coastal storm surges.",Yes
-Wakulla,Zone B,"Moderate risk, evacuated as needed.",No
-Walton,Zone B,"Moderate risk, evacuated as needed.",No
-Washington,Zone D,"Lower risk, not typically evacuated.",No
+County,Evacuation Zone,Zone Description,Evacuation Likelihood,Emergency Management Website,Distribution Center
+Alachua,Zone D,"Moderate risk, evacuated as needed.",No,https://alachuacountyready.com/?fbclid=IwAR3-8MiQXTk_btbIFW0MKgZnPqlPHQLQ_Zcd43ZewpdMXMW8Dz_ivhGfzMY,Alachua County Fairgrounds
+Baker,Zone C,"Moderate risk, evacuated later.",No,https://www.bakercountysheriffsoffice.com/emergency-management,Baker County Community Center
+Bay,Zone A,"High risk coastal area, generally evacuated early.",Yes,https://www.baycountyfl.gov/166/Emergency-Management,Bay County Fairgrounds
+Bradford,Zone E,"Lower risk, not typically evacuated.",No,https://www.bradfordsheriff.org/emergency-management/,Bradford County Community Center
+Brevard,Zone A,"High risk, likely evacuated early.",Yes,https://www.brevardfl.gov/EmergencyManagement,Various Brevard PODs
+Broward,Zone A,"High risk coastal area, generally evacuated early.",Yes,https://www.broward.org/emergency/Pages/Default.aspx,Various Broward Sites
+Calhoun,Zone C,"Moderate risk, evacuated as needed.",No,https://www.calhouncountyfl.gov/departments/#emergency-management,Calhoun County High School
+Charlotte,Zone A,"High risk coastal area, generally evacuated early.",Yes,https://www.charlottecountyfl.gov/departments/public-safety/emergency-management/,Charlotte County Sports Park
+Citrus,Zone B,"Moderate risk, evacuated later.",No,https://www.sheriffcitrus.org/divisions/bureau_of_support_operations/emergency_operations.php,Citrus County Auditorium
+Clay,North Fork Black Creek,"Special flood-prone area, likely evacuated early.",Yes,https://www.claycountygov.com/community/emergency-management,Clay County Fairgrounds
+Collier,Zone F,"Less vulnerable, likely evacuated later in an emergency.",No,https://www.colliercountyfl.gov/government/county-manager-operations/divisions/emergency-management,Collier County Fairgrounds
+Columbia,Zone D,"Lower risk, evacuated later in severe cases.",No,https://www.columbiacountyfla.com/EmergencyMgt_911.asp#Emergency%20Management,Lake City Fairgrounds
+DeSoto,Zone D,"Lower risk, evacuated later in severe cases.",No,https://desotobocc.com/departments/emergency_management,DeSoto Park
+Dixie,Zone C,"Moderate risk, evacuated as needed.",No,https://www.dixieemergency.org/emergency-management/,Dixie County Community Center
+Duval,Zone F,"Less vulnerable, likely evacuated later in an emergency.",No,https://www.jaxready.com/,Jacksonville Fairgrounds
+Escambia,Zone A,"High risk, coastal area, evacuated early.",Yes,https://myescambia.com/our-services/public-safety/beready,Escambia Community Center
+Flagler,Potential Hurricane Evacuation Zone,"Flagler's potential hurricane evacuation area, affected by severe storms.",Yes,https://www.flaglercounty.gov/departments/emergency-management,Flagler Fairgrounds
+Franklin,Zone A,"High risk, coastal area, evacuated early.",Yes,https://www.franklinemergencymanagement.com/,Franklin Community Center
+Gadsden,Zone D,"Lower risk, evacuated as needed.",No,https://www.gadsdencountyfl.gov/departments/emergency-management,Gadsden County Fairgrounds
+Gilchrist,Zone D,"Moderate risk, evacuated as needed.",No,http://www.gilchristemergency.com/,Gilchrist Community Hub
+Glades,Zone E,"Lower risk, not typically evacuated.",No,https://www.myglades.com/departments/public_safety/emergency_management/index.php,Glades County Community Center
+Gulf,Zone B,"Moderate risk, evacuated later.",No,http://www.gulfcounty-fl.gov/county_government/emergency_management,Gulf County Fairgrounds
+Hamilton,Zone D,"Lower risk, not typically evacuated.",No,https://hamiltoncountyfl.com/emergency-management/,Hamilton Community Center
+Hardee,Zone D,"Moderate risk, evacuated later.",No,https://www.hardeecountyfl.gov/emergency-management/dashboard,Hardee County Auditorium
+Hendry,Zone E,"Lower risk, not typically evacuated.",No,http://www.hendryfla.net/emergency_management.php,Hendry County Fairgrounds
+Hernando,Zone C,"Lower risk, evacuated later in severe cases.",No,https://www.hernandocounty.us/departments/departments-a-e/emergency-management,Hernando Community Center
+Highlands,Zone D,"Lower risk, evacuated later in severe cases.",No,https://www.highlandsfl.gov/departments/PublicSafety/em.php,Highlands County Fairgrounds
+Hillsborough,Zone B,"Moderate risk coastal area, evacuated as needed.",Yes,https://hcfl.gov/residents/public-safety/emergency-management,Hillsborough Community Hub
+Holmes,Zone E,"Lower risk, not typically evacuated.",No,https://holmescountyem.org/,Holmes County Fairgrounds
+Indian River,Zone A,"High risk, likely evacuated early.",Yes,https://indianriver.gov/services/emergency_services/emergency_management/index.php,Indian River Fairgrounds
+Jackson,Zone D,"Lower risk, not typically evacuated.",No,http://emergencymanager.org/,Jackson County Fairgrounds
+Jefferson,Zone C,"Lower risk, evacuated later in severe cases.",No,http://www.jeffersoncountyfl.gov/p/county-departments/emergency-management,Jefferson County Community Center
+Lafayette,Zone E,"Lower risk, not typically evacuated.",No,http://lafayetteso.org/emergency-management.html,Lafayette Fairgrounds
+Lake,Zone E,"Lower risk, evacuated later in severe cases.",No,https://www.lakecountyfl.gov/emergency-management,Lake County Fairgrounds
+Lee,Zone A,"High risk coastal area, generally evacuated early.",Yes,https://www.leegov.com/publicsafety/emergencymanagement,Lee Civic Center
+Leon,Zone C,"Lower risk, evacuated as needed.",No,https://cms.leoncountyfl.gov/ei/,Leon County Community Hub
+Levy,Zone D,"Lower risk, evacuated later in severe cases.",No,https://levydisaster.com/,Levy Community Center
+Liberty,Zone E,"Lower risk, not typically evacuated.",No,http://www.libertycountyflem.com/,Liberty County Fairgrounds
+Madison,Zone D,"Lower risk, not typically evacuated.",No,https://madisoncountyfl.com/emergency-management/,Madison Community Center
+Manatee,Zone C,"Moderate risk, evacuated later.",No,https://www.mymanatee.org/departments/public_safety/emergency_management,Manatee County Convention Center
+Marion,Zone D,"Moderate risk, evacuated as needed.",No,https://www.marionso.com/emergency-management/?rq=emergency,Marion County Fairgrounds
+Martin,Zone A,"Moderate risk, evacuated as needed.",No,https://www.martin.fl.us/EM,Martin County Community Hub
+Miami-Dade,Zone A,"Highest risk coastal area, first to evacuate.",Yes,https://www.miamidade.gov/global/emergency/home.page,Miami-Dade Fairgrounds
+Monroe,Zone AB,Highly vulnerable coastal areas likely to evacuate first.,Yes,https://www.monroecounty-fl.gov/782/Emergency-Management,Monroe County Community Center
+Nassau,Zone F,"Less vulnerable, likely evacuated later in an emergency.",No,https://www.onenassau.com/,Nassau County Fairgrounds
+Okaloosa,Zone A,"High risk, coastal area, evacuated early.",Yes,https://myokaloosa.com/ps/home,Okaloosa Fairgrounds
+Okeechobee,Zone E,"Lower risk, evacuated later in severe cases.",No,https://www.okeechobeecountyfl.gov/departments/emergency-home-page,Okeechobee County Civic Center
+Orange,Zone D,"Moderate risk, evacuated as needed.",No,http://www.orangecountyfl.net/EmergencySafety/DisasterPreparedness.aspx#.Vjp8isvls5s,Orange County Fairgrounds
+Osceola,Zone A,"High risk, likely evacuated early.",Yes,https://www.osceola.org/agencies-departments/emergency-management/,Osceola County Convention Center
+Palm Beach,Zone L,"Special zone designation, potentially affected by high-impact storms.",Yes,http://www.pbcgov.com/dem/sections/operations/shelters.htm,Palm Beach Fairgrounds
+Pasco,Zone B,"Moderate risk, evacuated as needed.",No,https://www.pascocountyfl.net/services/emergency_management/index.php,Pasco County Community Center
+Pinellas,Mobile Home,"Mobile home residents at higher risk, typically evacuated early.",Yes,https://pinellas.gov/emergency-information/,Pinellas Resource Centers
+Polk,Zone C,"Moderate risk, evacuated later.",No,https://www.polk-county.net/public-safety/emergency-management/,Polk County Fairgrounds
+Putnam,Zone E,"Lower risk, evacuated later in severe cases.",No,https://main.putnam-fl.com/?page_id=48,Putnam County Community Center
+Santa Rosa,Zone A,"High risk, coastal area, evacuated early.",Yes,https://www.santarosa.fl.gov/666/Emergency-Management,Santa Rosa Fairgrounds
+Sarasota,Zone C,"Moderate risk, evacuated later.",No,https://www.scgov.net/government/departments/emergency-services,Sarasota County Fairgrounds
+Seminole,Zone D,"Moderate risk, evacuated as needed.",No,https://www.seminolecountyfl.gov/departments-services/prepare-seminole/,Seminole County Fairgrounds
+St. Johns,Zone F,"Less vulnerable, likely evacuated later in an emergency.",No,https://www.sjcfl.us/departments/emergency-mgmt/,St. Johns County Community Hub
+St. Lucie,Zone A,"High risk, likely evacuated early.",No,https://www.stlucieco.gov/departments-and-services/public-safety,St. Lucie Community Center
+Sumter,Zone E,"Lower risk, evacuated later in severe cases.",Yes,https://www.sumtercountyfl.gov/718/Emergency-Management,Sumter County Fairgrounds
+Suwannee,Zone D,"Moderate risk, evacuated later.",No,https://www.facebook.com/suwEOC,Suwannee County Fairgrounds
+Taylor,Zone C,"Lower risk, not typically evacuated.",No,https://www.taylorcountygov.com/residents/emergency_operations_center.php,Taylor County Civic Center
+Union,Zone E,"Moderate vulnerability, higher risk for coastal storm surges.",No,https://unioncounty-fl.gov/emergency-management/,Union County Fairgrounds
+Volusia,Zone BC,"Moderate risk, evacuated as needed.",Yes,https://www.volusia.org/services/emergency-services/emergency-management/,Volusia County Fairgrounds
+Wakulla,Zone B,"Moderate risk, evacuated as needed.",No,http://www.wcso.org/emergency-management/,Wakulla County Community Center
+Walton,Zone B,"Lower risk, not typically evacuated.",No,http://www.co.walton.fl.us/index.aspx?nid=1063,Walton County Fairgrounds
+Washington,Zone D,"Lower risk, not typically evacuated.",No,https://www.washingtonfl.com/departments/ems/about/,Washington County Community Hub
