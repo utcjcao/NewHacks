@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import RegistrationFields from "../components/RegistrationFields";
+import MapComponent from "../components/MapComponent"; // Adjust path as needed
 import * as options from "../components/options"; // Make sure options.js has the counties array
 
 const RegistrationPage = ({ formValues, setFormValues, handleSubmit }) => {
@@ -21,16 +22,19 @@ const RegistrationPage = ({ formValues, setFormValues, handleSubmit }) => {
   //   };
 
   return (
-    <div className="registration-page-container">
-      <h1>Registration Form</h1>
-      <form onSubmit={handleSubmit}>
-        <RegistrationFields values={formValues} onChange={handleChange} />
-
-        {/* Additional Button to Submit */}
-        <button type="submit" className="submit-button">
-          Submit
-        </button>
-      </form>
+    <div className="page-container">
+      <div className="form-container">
+        <h2>Registration Form</h2>
+        <form onSubmit={handleSubmit}>
+          <RegistrationFields values={formValues} onChange={handleChange} />
+          <button type="submit" className="submit-button">
+            Submit
+          </button>
+        </form>
+      </div>
+      
+      {/* Map Component */}
+      <MapComponent/>
     </div>
   );
 };
