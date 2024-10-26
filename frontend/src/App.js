@@ -8,6 +8,7 @@ import {
 import React, { useState } from "react";
 import RegistrationPage from "./pages/RegistrationPage";
 import SuggestedPage from "./pages/SuggestionPage";
+import Layout from "./layouts/Layout";
 
 function App() {
   // Define initial values for the form
@@ -35,20 +36,22 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route
-          path="/"
-          element={
-            onInfo ? (
-              <SuggestedPage setOnInfo={setOnInfo}></SuggestedPage>
-            ) : (
-              <RegistrationPage
-                formValues={formValues}
-                setFormValues={setFormValues}
-                handleSubmit={handleSubmit}
-              />
-            )
-          }
-        />
+        <Route path="/" element={<Layout />}>
+          <Route
+            index
+            element={
+              onInfo ? (
+                <SuggestedPage setOnInfo={setOnInfo}></SuggestedPage>
+              ) : (
+                <RegistrationPage
+                  formValues={formValues}
+                  setFormValues={setFormValues}
+                  handleSubmit={handleSubmit}
+                />
+              )
+            }
+          />
+        </Route>
       </Routes>
     </Router>
   );
