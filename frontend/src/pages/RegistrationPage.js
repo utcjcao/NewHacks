@@ -21,12 +21,10 @@ const RegistrationPage = ({ formValues, setFormValues, handleSubmit }) => {
   //   };
 
   return (
-    <div className="registration-page-container">
+    <div className="page-container">
       <h1>Registration Form</h1>
-      <form onSubmit={handleSubmit}>
+      <form className="form-container" onSubmit={handleSubmit}>
         <RegistrationFields values={formValues} onChange={handleChange} />
-
-        {/* Additional Button to Submit */}
         <button type="submit" className="submit-button">
           Submit
         </button>

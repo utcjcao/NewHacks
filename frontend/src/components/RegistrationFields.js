@@ -3,29 +3,9 @@ import * as options from "./options";
 import SelectInput from "./SelectInput";
 
 const RegistrationFields = ({ values, onChange }) => {
-  const [mobileView, setMobileView] = useState(false);
-
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setMobileView(window.innerWidth < 640);
-    };
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-
-    return () => {
-      window.removeEventListener("resize", checkScreenSize);
-    };
-  }, []);
-
   return (
     <>
-      <div
-        className={
-          mobileView
-            ? "max-sm:grid max-sm:grid-cols-1 max-sm:w-full"
-            : "md:grid md:grid-cols-2 md:gap-4"
-        }
-      >
+      <div className="input-container">
         <SelectInput
           id="county"
           name="county"

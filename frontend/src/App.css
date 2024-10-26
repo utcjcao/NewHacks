@@ -1,41 +1,22 @@
-/* Form Container */
-.form-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
-  gap: 20px; /* Space between fields */
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 900px; /* Limit the form width */
-  margin: 0 auto; /* Center the form horizontally */
-}
-
-/* Each Input Field */
-.input-field {
+.layout{
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
   display: flex;
   flex-direction: column;
 }
 
-/* Title for Each Input Field */
-.input-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-/* Input and Dropdown Styling */
 .dropdown, .text-input {
   padding: 12px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 100%;
+  margin-bottom: 20px;
 }
 
-/* Submit Button Styling */
 .submit-button {
-  grid-column: span 3; /* Make the submit button take up the full width of all 3 columns */
   padding: 12px 20px;
   background-color: #007bff;
   color: #fff;
@@ -49,4 +30,56 @@
 
 .submit-button:hover {
   background-color: #0056b3;
+} 
+
+
+.sidebar {
+  width: 200px; 
+  background-color: #f4f400; 
+  height: 100vh; 
+
+}
+.sidebar h2 {
+  margin-bottom: 20px; 
+}
+
+.sidebar ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+
+.sidebar a {
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Text color */
+  display: block; /* Make the whole area clickable */
+  padding: 10px; /* Add padding for better click area */
+}
+
+.sidebar a:hover {
+  background-color: #ddd; /* Change background on hover */
+}
+
+.header {
+  background-color: #4CAF50; /* Header background color */
+  color: white; /* Text color */
+  padding-left:30px;
+  top: 0; /* Align to the top of the page */
+ 
+}
+
+.main {
+  display: flex; /* Set up a flex container */
+  flex-direction: row;
+
+  overflow: auto; /* Enable scrolling if needed */
+  gap:10px;
+}
+
+.page-container {
+  padding:10px;  
+}
+.page-container h1 {
+  gap: 0px;
+  padding:0px;
 }
