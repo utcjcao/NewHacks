@@ -85,6 +85,69 @@ const RegistrationFields = ({ values, onChange }) => {
             </option>
           ))}
         </SelectInput>
+        <SelectInput
+          id="youngInfants"
+          name="youngInfants"
+          label="Do you Have Children Under 5"
+          value={values.youngInfants}
+          onChange={onChange}
+        >
+          <option value="">Do you have any children under 5?</option>
+          {options.yesNoOptions.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </SelectInput>
+
+        {values.youngInfants === "Yes" && (
+          <SelectInput
+            id="childCount"
+            name="childCount"
+            label="How Many Children Under 5"
+            value={values.childCount}
+            onChange={onChange}
+          >
+            <option value="">Select number of children</option>
+            {options.childCountOptions.map((count) => (
+              <option key={count} value={count}>
+                {count}
+              </option>
+            ))}
+          </SelectInput>
+        )}
+
+        <SelectInput
+          id="pets"
+          name="pets"
+          label="Pets"
+          value={values.pets}
+          onChange={onChange}
+        >
+          <option value="">Do you have any pets?</option>
+          {options.yesNoOptions.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </SelectInput>
+
+        {values.pets === "Yes" && (
+          <SelectInput
+            id="petCount"
+            name="petCount"
+            label="How Many Pets"
+            value={values.petCount}
+            onChange={onChange}
+          >
+            <option value="">Select number of pets</option>
+            {options.petCountOptions.map((count) => (
+              <option key={count} value={count}>
+                {count}
+              </option>
+            ))}
+          </SelectInput>
+        )}
       </div>
     </>
   );
