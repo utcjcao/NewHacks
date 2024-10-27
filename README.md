@@ -16,7 +16,12 @@ Welcome to our **NewHacks** project! This repository contains code and resources
 
 ## Project Overview
 
-**NewHacks** aims to [describe key objectives and the problem your project addresses, e.g., "provide real-time data visualization for weather patterns, enabling users to track storms in specific regions interactively."]. Developed as part of the NewHacks hackathon, this project demonstrates collaborative problem-solving and technical skills in web development, API integration, and data representation.
+The Guardian is a comprehensive hurricane preparedness app designed to support individuals in Florida during a hurricane. It includes:
+
+Preparedness Guide: Delivers tailored information based on the user’s county and family size to provide specific, actionable steps and a tailored checklist.
+Interactive Chatbot: An AI-driven chatbot built with RAG and Cohere API, designed to provide specific, accurate and context-aware guidance during emergencies.
+Nearby Resources: Provides location-based searches for available shelters and hotels. Using real-time storm tracking data, The Guardian identifies safe paths to these resources, guiding users along routes that are free from hurricane impact areas. This feature helps users navigate away from dangerous zones, prioritizing safety and accessibility when they need it most.
+Storm Tracking: Real-time updates on storm paths and intensity.
 
 ## Features
 - **Interactive Map Visualization**: Track weather patterns using Google Maps integration.
