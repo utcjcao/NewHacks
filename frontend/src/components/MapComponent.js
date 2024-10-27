@@ -9,7 +9,7 @@ const MapComponent = ({ height = "700px", width = "500px" }) => {
     const loadGoogleMapsScript = () => {
       if (!window.google) {
         const script = document.createElement("script");
-        script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDn4wygzwCJA-9QDihCAmXo2KMkrVJNC-Q&v=weekly`;
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}&v=weekly`;
         script.async = true;
         script.defer = true;
         document.body.appendChild(script);
