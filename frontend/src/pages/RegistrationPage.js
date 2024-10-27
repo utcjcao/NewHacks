@@ -26,17 +26,17 @@ const RegistrationPage = ({ formValues, setFormValues, handleSubmit }) => {
       <div className="form-container">
         <h2>Registration Form</h2>
         <form onSubmit={handleSubmit}>
-          <RegistrationFields values={formValues} onChange={handleChange} />
-          <button type="submit" className="submit-button">
-            Submit
-          </button>
+          <RegistrationFields values={formValues} onChange={(e) => setFormValues({ ...formValues, [e.target.name]: e.target.value })} />
+          <button type="submit" className="submit-button">Submit</button>
         </form>
       </div>
       
-      {/* Map Component */}
-      <MapComponent/>
+      {/* Render the MapComponent here */}
+      <MapComponent />
     </div>
   );
 };
+
+
 
 export default RegistrationPage;
