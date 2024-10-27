@@ -1,5 +1,5 @@
 import React from "react";
-import StormTrack from "../components/Storm";
+import StormTrack from "../components/Storm"; 
 
 const StormTrackPage = () => {
   return (
