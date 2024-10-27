@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Message from "../components/Message";
+import "./ChatBotPage.css";
 
 const ChatbotPage = ({ socket, formValues }) => {
   const [query, setQuery] = useState("");
@@ -21,10 +23,13 @@ const ChatbotPage = ({ socket, formValues }) => {
   const handleSend = async () => {
     if (!query.trim()) return;
 
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      { text: query, sender: "user" },
+    ]);
     const userMessage = { ...formValues, user_query: query, sender: "user" };
-    setMessages((prevMessages) => [...prevMessages, userMessage]);
+
     if (socket) {
-      console.log("socketon");
       socket.emit("generate-response", userMessage);
     }
 
@@ -37,18 +42,21 @@ const ChatbotPage = ({ socket, formValues }) => {
       <div className="content-container">
         <div className="messages">
           {messages.map((msg, index) => (
-            <div key={index} className={`message ${msg.sender}`}>
-              {msg.text}
-            </div>
+            <Message key={index} user={msg.sender} text={msg.text}></Message>
           ))}
         </div>
+      </div>
+      <div className="input-container">
         <input
           type="text"
+          className="text-input"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Type your message..."
         />
-        <button onClick={handleSend}>Send</button>
+        <button className="chat-button" onClick={handleSend}>
+          Send
+        </button>
       </div>
     </div>
   );

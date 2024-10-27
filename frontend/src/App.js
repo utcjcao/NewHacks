@@ -19,7 +19,7 @@ function App() {
   const [onInfo, setOnInfo] = useState(false);
   const [socket, setSocket] = useState();
   const [formValues, setFormValues] = useState({
-    county: "",
+    county: "default",
     familySize: "",
     travelMeans: "",
     youngInfants: "",

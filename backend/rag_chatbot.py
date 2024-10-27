@@ -7,16 +7,17 @@ import faiss
 import numpy as np
 import re
 from datascraping import prepare_emergency_plan
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os 
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 socketio = SocketIO(app, cors_allowed_origins="http://localhost:3000")
 
-load_dotenv(dotenv_path='/Users/anishpai/NewHacks/backend/.env.local')
-CO_API_KEY = os.getenv("CO_API_KEY")
-co = cohere.Client(CO_API_KEY)
+# load_dotenv(dotenv_path='.env.local')
+# CO_API_KEY = os.getenv("CO_API_KEY")
+# co = cohere.Client(CO_API_KEY)
+co = cohere.Client('9U1arTaBk7dBninVJArtzR6oZlQwSfnZXcNnoJga')
 
 def load_json_vectors(json_path):
     with open(json_path, 'r') as file:
@@ -33,7 +34,7 @@ def create_faiss_index(embeddings):
     index.add(embeddings)
     return index
 
-json_path = "/Users/anishpai/NewHacks/backend/hurricane_preparedness_vectors.json"
+json_path = "./hurricane_preparedness_vectors.json"
 sections, topics, embeddings = load_json_vectors(json_path)
 index = create_faiss_index(embeddings)
 
@@ -49,9 +50,8 @@ def retrieve_relevant_section(query, sections, topics, index, embeddings):
     return f"**{topic}:** {limited_text}"
 
 @socketio.on('generate-response')
-def generate_response():
+def generate_response(data):
     """Generate a response based on user query and emergency plan details."""
-    data = request.json
     user_query = data.get("user_query")
     county = data.get("county")
     num_people = data.get("num_people", 1)
@@ -60,7 +60,7 @@ def generate_response():
 
     emergency_plan = prepare_emergency_plan(county, num_people, kids, pets)
     
-    if county != "":
+    if county != "default":
         if "evacuate" in user_query.lower():
             response = f"You {'need to evacuate' if emergency_plan['Evacuation Needed'] == 'Yes' else 'do not need to evacuate'} in {county}. Zone: {emergency_plan['Evacuation Zone']} ({emergency_plan['Zone Description']})."
         elif "supplies" in user_query.lower() or "bring" in user_query.lower():
@@ -79,9 +79,8 @@ def generate_response():
     socketio.emit('recieve-response', response)
 
 @socketio.on('generate-emergency-plan')
-def retrieve_emergency_plan():
+def retrieve_emergency_plan(data):
     """API endpoint to get emergency plan details."""
-    data = request.json
     county = data.get("county")
     num_people = data.get("num_people", 1)
     kids = data.get("kids", False)
