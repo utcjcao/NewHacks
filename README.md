@@ -1,8 +1,8 @@
 ---
 
-# NewHacks
+# Guardian
 
-Welcome to the **NewHacks** project! This repository contains code and resources for a project developed as part of NewHacks, focusing on [brief description of project objective and purpose, e.g., "a storm-tracking application that visualizes weather data"]. The project is designed using React for the frontend and Flask for backend services, integrating the Google Maps API for interactive map-based data visualization.
+Welcome to our **NewHacks** project! This repository contains code and resources for a project developed as part of NewHacks, focusing on [brief description of project objective and purpose, e.g., "a storm-tracking application that visualizes weather data"]. The project is designed using React for the frontend and Flask for backend services, integrating the Google Maps API for interactive map-based data visualization.
 
 ## Table of Contents
 - [Project Overview](#project-overview)
