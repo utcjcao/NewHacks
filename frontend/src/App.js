@@ -12,30 +12,19 @@ import Layout from "./layouts/Layout";
 import RoutePage from "./pages/RoutePage";
 import ChatbotPage from "./pages/ChatbotPage";
 import { io } from "socket.io-client";
+import { FormProvider } from "./components/FormProvider";
 
 function App() {
   // Define initial values for the form
-  // const navigate = useNavigate();
   const [onInfo, setOnInfo] = useState(false);
   const [socket, setSocket] = useState();
-  const [formValues, setFormValues] = useState({
-    county: "default",
-    familySize: "",
-    travelMeans: "",
-    youngInfants: "",
-    childCount: "",
-    pets: "",
-    petCount: "",
-  });
+
   const [items, setItems] = useState({});
 
   useEffect(() => {
-    console.log("touch");
     if (socket == null) return;
-    console.log("touc2");
     const handler_code = (newItems) => {
       setItems(newItems);
-      console.log("hello");
     };
     socket.on("recieve-emergency-plan", handler_code);
     return () => {
@@ -53,40 +42,33 @@ function App() {
   // Handler for form submission
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route
-            index
-            element={
-              onInfo ? (
-                <SuggestionPage
-                  setOnInfo={setOnInfo}
-                  items={items}
-                ></SuggestionPage>
-              ) : (
-                <InfoPage
-                  setOnInfo={setOnInfo}
-                  socket={socket}
-                  formValues={formValues}
-                  setFormValues={setFormValues}
-                />
-              )
-            }
-          />
-          <Route path="/route" element={<RoutePage></RoutePage>} />
-          <Route
-            path="/chatbot"
-            element={
-              <ChatbotPage
-                socket={socket}
-                formValues={formValues}
-              ></ChatbotPage>
-            }
-          />
-        </Route>
-      </Routes>
-    </Router>
+    <FormProvider>
+      {" "}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route
+              index
+              element={
+                onInfo ? (
+                  <SuggestionPage
+                    setOnInfo={setOnInfo}
+                    items={items}
+                  ></SuggestionPage>
+                ) : (
+                  <InfoPage setOnInfo={setOnInfo} socket={socket} />
+                )
+              }
+            />
+            <Route path="/route" element={<RoutePage></RoutePage>} />
+            <Route
+              path="/chatbot"
+              element={<ChatbotPage socket={socket}></ChatbotPage>}
+            />
+          </Route>
+        </Routes>
+      </Router>
+    </FormProvider>
   );
 }
 

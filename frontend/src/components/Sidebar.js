@@ -1,20 +1,21 @@
 import React from "react";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <h1 className="header">header1</h1>
+      <h1 className="header">tools</h1>
       <nav>
         <ul className="nav-list">
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/route">Route Planner</a>
+            <Link to="/route">Route Planner</Link>
           </li>
           <li>
-            <a href="/chatbot">Chatbot</a>
+            <Link to="/chatbot">Chatbot</Link>
           </li>
         </ul>
       </nav>

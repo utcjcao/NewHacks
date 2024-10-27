@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Message from "../components/Message";
 import "./ChatBotPage.css";
+import { useForm } from "../components/FormProvider";
 
-const ChatbotPage = ({ socket, formValues }) => {
+const ChatbotPage = ({ socket }) => {
   const [query, setQuery] = useState("");
   const [messages, setMessages] = useState([]);
+  const { formValues, setFormValues } = useForm();
 
   useEffect(() => {
     if (socket == null) {
@@ -22,7 +24,7 @@ const ChatbotPage = ({ socket, formValues }) => {
 
   const handleSend = async () => {
     if (!query.trim()) return;
-
+    console.log(formValues);
     setMessages((prevMessages) => [
       ...prevMessages,
       { text: query, sender: "user" },

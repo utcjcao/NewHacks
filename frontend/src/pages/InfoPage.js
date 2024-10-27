@@ -3,7 +3,10 @@ import RegistrationFields from "../components/RegistrationFields";
 import * as options from "../components/options"; // Make sure options.js has the counties array
 import MapComponent from "../components/MapComponent";
 import "./InfoPage.css";
-const InfoPage = ({ setOnInfo, socket, formValues, setFormValues }) => {
+import { useForm } from "../components/FormProvider";
+
+const InfoPage = ({ setOnInfo, socket }) => {
+  const { formValues, setFormValues } = useForm();
   const handleSubmit = (e) => {
     e.preventDefault();
     if (socket) {
@@ -19,21 +22,23 @@ const InfoPage = ({ setOnInfo, socket, formValues, setFormValues }) => {
       ...formValues,
       [name]: value,
     });
-    setFormValues((prevForm) => ({ ...prevForm, [name]: value }));
+    console.log(formValues);
+    // setFormValues((prevForm) => ({ ...prevForm, [name]: value }));
   };
 
   return (
     <div>
-
       <div className="page-container">
         <div className="form-container">
           <h2>Emergency Response Information</h2>
           <form onSubmit={handleSubmit}>
-            <RegistrationFields values={formValues} onChange={(e) => setFormValues({ ...formValues, [e.target.name]: e.target.value })} />
-            <button type="submit" className="submit-button">Submit</button>
+            <RegistrationFields values={formValues} onChange={handleChange} />
+            <button type="submit" className="submit-button">
+              Submit
+            </button>
           </form>
         </div>
-        
+
         {/* Render the MapComponent here */}
         <div className="map-container">
           <MapComponent />

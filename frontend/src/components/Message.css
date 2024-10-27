@@ -8,20 +8,20 @@
   color: white; /* Text color */
   font-size: 16px; 
   word-wrap: break-word; /* Ensure long words wrap to the next line */
+  
   }
+
   
   .user-message {
     background-color: #007bff; /* Blue color for user messages */
     text-align: right;
-    align-self: flex-end;
-    align-items:end;
+    
   }
   
   .other-message {
     background-color: white; 
     text-align: left;
-    align-items:start;
-    align-self: flex-start;
+
     color: black;
   }
   

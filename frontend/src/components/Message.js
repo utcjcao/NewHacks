@@ -6,9 +6,17 @@ const Message = ({ user, text }) => {
 
   return (
     <div
-      className={`message ${isUserMessage ? "user-message" : "other-message"}`}
+      className={`message-container ${
+        isUserMessage ? "user-message" : "other-message"
+      }`}
     >
-      <p>{text}</p>
+      <div
+        className={`message ${
+          isUserMessage ? "user-message" : "other-message"
+        }`}
+      >
+        <p>{text}</p>
+      </div>
     </div>
   );
 };
