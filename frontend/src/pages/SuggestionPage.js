@@ -4,9 +4,8 @@ const SuggestedPage = ({ setOnInfo }) => {
   return (
     <>
       <div className="page-container">
-        <div className="form-container">
-          <button onClick={() => setOnInfo(false)}>go back</button>
-        </div>
+        <h1 className="header">header3</h1>
+        <button onClick={() => setOnInfo(false)}>go back</button>
       </div>
     </>
   );

@@ -6,9 +6,8 @@ import Header from "../components/Header";
 const Layout = () => {
   return (
     <div className="layout">
-      <Header></Header>
+      <Sidebar></Sidebar>
       <div className="main">
-        <Sidebar className="sidebar"></Sidebar>
         <Outlet></Outlet>
       </div>
     </div>

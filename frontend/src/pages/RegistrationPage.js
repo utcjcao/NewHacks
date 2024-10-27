@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import RegistrationFields from "../components/RegistrationFields";
 import * as options from "../components/options"; // Make sure options.js has the counties array
+import "./RegistrationPage.css";
 
 const RegistrationPage = ({ formValues, setFormValues, handleSubmit }) => {
   // Handler to update form values on input change
@@ -13,17 +14,10 @@ const RegistrationPage = ({ formValues, setFormValues, handleSubmit }) => {
     setFormValues((prevForm) => ({ ...prevForm, [name]: value }));
   };
 
-  //   // Handler for form submission
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     console.log("Form Submitted", formValues);
-  //     // Add your backend submission code here
-  //   };
-
   return (
     <div className="page-container">
-      <h1>Registration Form</h1>
-      <form className="form-container" onSubmit={handleSubmit}>
+      <h1 className="header">header1</h1>
+      <form className="content-container" onSubmit={handleSubmit}>
         <RegistrationFields values={formValues} onChange={handleChange} />
         <button type="submit" className="submit-button">
           Submit

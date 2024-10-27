@@ -1,85 +1,66 @@
-.layout{
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+
+.layout {
   display: flex;
-  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.dropdown, .text-input {
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  margin-bottom: 20px;
+.layout .sidebar {
+    width: 30%;
+
+    flex:1;
+    border-right: 1px solid #ddd;
+    background-color: #1E201E;
 }
 
-.submit-button {
-  padding: 12px 20px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
+
+.layout .sidebar h1 {
+margin: 0;
+color:#ddd;
 }
 
-.submit-button:hover {
-  background-color: #0056b3;
-} 
 
-
-.sidebar {
-  width: 200px; 
-  background-color: #f4f400; 
-  height: 100vh; 
-
-}
-.sidebar h2 {
-  margin-bottom: 20px; 
-}
 
 .sidebar ul {
-  list-style-type: none; /* Remove default list styling */
-  padding: 0; /* Remove default padding */
+list-style-type: none; 
 }
 
 
 .sidebar a {
-  text-decoration: none; /* Remove underline */
-  color: #333; /* Text color */
-  display: block; /* Make the whole area clickable */
-  padding: 10px; /* Add padding for better click area */
+text-decoration: none; 
+color: #ddd; 
+display: block; 
+padding: 10px; 
 }
 
 .sidebar a:hover {
-  background-color: #ddd; /* Change background on hover */
-}
-
-.header {
-  background-color: #4CAF50; /* Header background color */
-  color: white; /* Text color */
-  padding-left:30px;
-  top: 0; /* Align to the top of the page */
- 
+background-color: #ddd; /* Change background on hover */
 }
 
 .main {
-  display: flex; /* Set up a flex container */
-  flex-direction: row;
-
-  overflow: auto; /* Enable scrolling if needed */
-  gap:10px;
+flex: 3; 
+display: flex;
+flex-direction: column;
+gap:10px
+}
+.header {
+display: flex;
+align-items: center; /* Vertically center-aligns content */
+justify-content: space-between;
+padding: 25px;
+border-bottom: 1px solid #ddd;
+margin: 0px;
 }
 
-.page-container {
-  padding:10px;  
+.content-container {
+    background-color: #F5F7F8;
+    height: 100%;
 }
-.page-container h1 {
-  gap: 0px;
-  padding:0px;
+
+.header h1 {
+margin: 0;
 }

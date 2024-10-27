@@ -37,21 +37,6 @@ const RegistrationFields = ({ values, onChange }) => {
         </SelectInput>
 
         <SelectInput
-          id="houseType"
-          name="houseType"
-          label="House Type"
-          value={values.houseType}
-          onChange={onChange}
-        >
-          <option value="">Select your house type</option>
-          {options.houseTypes.map((type) => (
-            <option key={type} value={type}>
-              {type}
-            </option>
-          ))}
-        </SelectInput>
-
-        <SelectInput
           id="travelMeans"
           name="travelMeans"
           label="Travel Means"

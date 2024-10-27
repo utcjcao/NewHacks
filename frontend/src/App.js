@@ -17,7 +17,6 @@ function App() {
   const [formValues, setFormValues] = useState({
     county: "",
     familySize: "",
-    houseType: "",
     travelMeans: "",
     youngInfants: "",
     childCount: "",
