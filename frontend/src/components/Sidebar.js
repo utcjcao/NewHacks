@@ -4,7 +4,7 @@ import "../App.css";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <h1 className="header">header1</h1>
+      <h1 className="header">Pages</h1>
       <nav>
         <ul className="nav-list">
           <li>
