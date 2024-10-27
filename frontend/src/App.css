@@ -9,10 +9,12 @@ body {
 }
 
 .layout .sidebar {
+  padding-top: 120px; /* Add padding to prevent content from overlapping with the fixed banner */
     width: 20%;
     flex:1;
     border-right: 1px solid #ddd;
     background-color: #1E201E;
+
 }
 
 .layout .sidebar h1 {
@@ -53,6 +55,12 @@ padding: 25px;
 border-bottom: 1px solid #ddd;
 margin: 0px;
 }
+
+#map {
+  height: 80vh; /* Or a specific pixel height */
+  width: 100%;
+}
+
 
 .content-container {
     background-color: #F5F7F8;

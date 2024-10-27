@@ -80,4 +80,3 @@ kids = True
 pets = False
 
 emergency_plan = prepare_emergency_plan(county_info, num_people, kids, pets)
-

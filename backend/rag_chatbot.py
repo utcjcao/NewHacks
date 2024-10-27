@@ -1,14 +1,22 @@
 from flask import Flask, request, jsonify
+from flask_socketio import SocketIO
+from flask_cors import CORS
 import json
 import cohere
 import faiss
 import numpy as np
 import re
-from datascraping import prepare_emergency_plan  
+from datascraping import prepare_emergency_plan
+from dotenv import load_dotenv
+import os 
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+socketio = SocketIO(app, cors_allowed_origins="http://localhost:3000")
 
-co = cohere.Client('9U1arTaBk7dBninVJArtzR6oZlQwSfnZXcNnoJga')
+load_dotenv(dotenv_path='/Users/anishpai/NewHacks/backend/.env.local')
+CO_API_KEY = os.getenv("CO_API_KEY")
+co = cohere.Client(CO_API_KEY)
 
 def load_json_vectors(json_path):
     with open(json_path, 'r') as file:
@@ -40,7 +48,7 @@ def retrieve_relevant_section(query, sections, topics, index, embeddings):
     limited_text = ' '.join(sentences[:2])  
     return f"**{topic}:** {limited_text}"
 
-@app.route('/generate_response', methods=['POST'])
+@socketio.on('generate-response')
 def generate_response():
     """Generate a response based on user query and emergency plan details."""
     data = request.json
@@ -68,9 +76,9 @@ def generate_response():
     else:
         response = retrieve_relevant_section(user_query, sections, topics, index, embeddings)
 
-    return jsonify({"response": response})
+    socketio.emit('recieve-response', response)
 
-@app.route('/get_emergency_plan', methods=['POST'])
+@socketio.on('generate-emergency-plan')
 def retrieve_emergency_plan():
     """API endpoint to get emergency plan details."""
     data = request.json
@@ -83,7 +91,7 @@ def retrieve_emergency_plan():
     
     emergency_plan["Supplies Checklist"] = emergency_plan["Supplies Checklist"].to_dict(orient="records")
     
-    return jsonify(emergency_plan)
+    socketio.emit('recieve-emergency-plan', emergency_plan) 
 
 
 if __name__ == "__main__":

@@ -3,7 +3,7 @@ import React from "react";
 const RoutePage = () => {
   return (
     <div className="page-container">
-      <h1 className="header">header1</h1>
+      <h1 className="header">routes</h1>
     </div>
   );
 };
