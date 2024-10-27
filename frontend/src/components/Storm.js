@@ -1,7 +1,8 @@
-import React from "react";
-import stormTracking from "../assets/storm_tracking.png"; // Adjust path as needed
+// YourComponent.js
+import React from 'react';
+import stormTracking from '../assets/storm.png'; // Adjust path as needed
 
-const Storm = () => {
+const StormTrack = () => {
   return (
     <div>
       <h2>Storm Tracking</h2>
@@ -10,4 +11,4 @@ const Storm = () => {
   );
 };
 
-export default Storm;
+export default StormTrack;
