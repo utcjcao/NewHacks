@@ -1,39 +1,34 @@
 import React, { useState, useEffect } from "react";
-import { io } from "socket.io-client";
 
-const ChatbotPage = () => {
-  const [socket, setSocket] = useState();
+const ChatbotPage = ({ socket, formValues }) => {
   const [query, setQuery] = useState("");
   const [messages, setMessages] = useState([]);
-
-  useEffect(() => {
-    const s = io("http://localhost:5000");
-    setSocket(s);
-    return () => {
-      s.disconnect();
-    };
-  }, []);
 
   useEffect(() => {
     if (socket == null) {
       return;
     }
     const update_messages = (new_message) => {
-      const botMessage = { text: new_message.data.response, sender: "bot" };
+      const botMessage = { text: new_message, sender: "bot" };
       setMessages((prevMessages) => [...prevMessages, botMessage]);
     };
-    socket.on("recieve-feedback", update_messages);
+    socket.on("recieve-response", update_messages);
     return () => {
-      socket.off("recieve-feedback", update_messages);
+      socket.off("recieve-response", update_messages);
     };
   }, [socket]);
 
   const handleSend = async () => {
     if (!query.trim()) return;
+    console.log("helloooo");
 
-    const userMessage = { text: query, sender: "user" };
+    const userMessage = { ...formValues, user_query: query, sender: "user" };
     setMessages((prevMessages) => [...prevMessages, userMessage]);
-    socket.emit("send-query", query);
+    if (socket) {
+      console.log("socketon");
+      socket.emit("generate-response", userMessage);
+    }
+
     setQuery("");
   };
 

@@ -1,4 +1,6 @@
 from flask import Flask, request, jsonify
+from flask_socketio import SocketIO
+from flask_cors import CORS
 import json
 import cohere
 import faiss
@@ -7,6 +9,8 @@ import re
 from datascraping import prepare_emergency_plan  # Import the function from your data-scraping script
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+socketio = SocketIO(app, cors_allowed_origins="http://localhost:3000")
 
 # Initialize Cohere client and load embeddings
 co = cohere.Client('9U1arTaBk7dBninVJArtzR6oZlQwSfnZXcNnoJga')
@@ -28,7 +32,7 @@ def create_faiss_index(embeddings):
     return index
 
 # Load vectors
-json_path = "/Users/anishpai/NewHacks/backend/hurricane_preparedness_vectors.json"
+json_path = "./hurricane_preparedness_vectors.json"
 sections, topics, embeddings = load_json_vectors(json_path)
 index = create_faiss_index(embeddings)
 
@@ -44,10 +48,10 @@ def retrieve_relevant_section(query, sections, topics, index, embeddings):
 
     return f"**{topic}:** {limited_text}"
 
-@app.route('/generate_response', methods=['POST'])
-def generate_response():
+@socketio.on('generate-response')
+def generate_response(data):
     """Generate a response based on user query and emergency plan details."""
-    data = request.json
+    print(data)
     user_query = data.get("user_query")
     county = data.get("county")
     num_people = data.get("num_people", 1)
@@ -71,13 +75,11 @@ def generate_response():
     else:
         # Use RAG (Retrieve and Generate) response for other queries
         response = retrieve_relevant_section(user_query, sections, topics, index, embeddings)
-
-    return jsonify({"response": response})
-
-@app.route('/get_emergency_plan', methods=['POST'])
-def retrieve_emergency_plan():
+    socketio.emit('recieve-response', response)
+    
+@socketio.on('generate-emergency-plan')
+def retrieve_emergency_plan(data):
     """API endpoint to get emergency plan details."""
-    data = request.json
     county = data.get("county")
     num_people = data.get("num_people", 1)
     kids = data.get("kids", False)
@@ -89,8 +91,9 @@ def retrieve_emergency_plan():
     # Convert DataFrame in 'Supplies Checklist' to JSON-serializable format
     emergency_plan["Supplies Checklist"] = emergency_plan["Supplies Checklist"].to_dict(orient="records")
     
-    return jsonify(emergency_plan)
+    socketio.emit('recieve-emergency-plan', jsonify(emergency_plan)) 
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    PORT = 5000  
+    socketio.run(app, host='localhost', port=PORT)

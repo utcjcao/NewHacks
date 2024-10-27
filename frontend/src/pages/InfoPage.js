@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import RegistrationFields from "../components/RegistrationFields";
 import * as options from "../components/options"; // Make sure options.js has the counties array
 import "./InfoPage.css";
+import { io } from "socket.io-client";
 
-const InfoPage = ({ formValues, setFormValues, handleSubmit }) => {
+const InfoPage = ({ setOnInfo, socket, formValues, setFormValues }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (socket) {
+      socket.emit("generate-emergency-plan");
+    }
+
+    setOnInfo(true);
+  };
   // Handler to update form values on input change
   const handleChange = (e) => {
     const { name, value } = e.target;
