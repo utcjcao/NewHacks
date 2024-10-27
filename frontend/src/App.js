@@ -6,7 +6,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 import React, { useState } from "react";
-import RegistrationPage from "./pages/RegistrationPage";
+import InfoPage from "./pages/InfoPage";
 import SuggestionPage from "./pages/SuggestionPage";
 import Layout from "./layouts/Layout";
 
@@ -43,7 +43,7 @@ function App() {
               onInfo ? (
                 <SuggestionPage setOnInfo={setOnInfo}></SuggestionPage>
               ) : (
-                <RegistrationPage
+                <InfoPage
                   formValues={formValues}
                   setFormValues={setFormValues}
                   handleSubmit={handleSubmit}

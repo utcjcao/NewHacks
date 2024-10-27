@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import RegistrationFields from "../components/RegistrationFields";
 import * as options from "../components/options"; // Make sure options.js has the counties array
-import "./RegistrationPage.css";
+import "./InfoPage.css";
 
-const RegistrationPage = ({ formValues, setFormValues, handleSubmit }) => {
+const InfoPage = ({ formValues, setFormValues, handleSubmit }) => {
   // Handler to update form values on input change
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,4 +27,4 @@ const RegistrationPage = ({ formValues, setFormValues, handleSubmit }) => {
   );
 };
 
-export default RegistrationPage;
+export default InfoPage;

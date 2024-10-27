@@ -4,11 +4,13 @@ body {
 }
 
 .content-container {
-  padding:40px
+  padding:40px;
 }
   
 .dropdown, .text-input {
-  padding: 12px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  gap:10px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
