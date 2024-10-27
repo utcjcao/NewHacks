@@ -52,16 +52,19 @@ def generate_response():
 
     emergency_plan = prepare_emergency_plan(county, num_people, kids, pets)
     
-    if "evacuate" in user_query.lower():
-        response = f"You {'need to evacuate' if emergency_plan['Evacuation Needed'] == 'Yes' else 'do not need to evacuate'} in {county}. Zone: {emergency_plan['Evacuation Zone']} ({emergency_plan['Zone Description']})."
-    elif "supplies" in user_query.lower() or "bring" in user_query.lower():
-        response = f"Based on your requirements, here’s your supplies checklist:\n{emergency_plan['Supplies Checklist']}"
-    elif "shelter" in user_query.lower():
-        response = f"Nearest shelter(s) for {county}:\n{emergency_plan['Shelters']}"
-    elif "website" in user_query.lower() or "contact" in user_query.lower():
-        response = f"Emergency contact website: {emergency_plan['County Website']}"
-    elif "distribution" in user_query.lower():
-        response = f"Distribution center: {emergency_plan['Distribution Center']}"
+    if county != "":
+        if "evacuate" in user_query.lower():
+            response = f"You {'need to evacuate' if emergency_plan['Evacuation Needed'] == 'Yes' else 'do not need to evacuate'} in {county}. Zone: {emergency_plan['Evacuation Zone']} ({emergency_plan['Zone Description']})."
+        elif "supplies" in user_query.lower() or "bring" in user_query.lower():
+            response = f"Based on your requirements, here’s your supplies checklist:\n{emergency_plan['Supplies Checklist']}"
+        elif "shelter" in user_query.lower():
+            response = f"Nearest shelter(s) for {county}:\n{emergency_plan['Shelters']}"
+        elif "website" in user_query.lower() or "contact" in user_query.lower():
+            response = f"Emergency contact website: {emergency_plan['County Website']}"
+        elif "distribution" in user_query.lower():
+            response = f"Distribution center: {emergency_plan['Distribution Center']}"
+        else:
+            response = retrieve_relevant_section(user_query, sections, topics, index, embeddings)
     else:
         response = retrieve_relevant_section(user_query, sections, topics, index, embeddings)
 
