@@ -57,19 +57,20 @@ def get_nearby_hotels(lat, lon, radius=50000, limit=10, cache_file="hotels_cache
     
     return hotel_list
     
-def get_route_to_hotel(start_lat, start_lon, hotel_list):
+def get_route_to_hotel(start_lat, start_lon, hotel_names):
     # Call routing API to get directions from start to hotel
     print("Calling routing API...")
     url = "https://maps.googleapis.com/maps/api/directions/json"
     params = {
-        "departure_time": "now",
-        "destination": "Concord, MA",
-        "origin": "Boston, MA",
-        "waypoints": "via:Charlestown,MA|via:Lexington,MA",
-        "alternatives": "true",
-        "traffic_model": "pessimistic",
-        "mode":"driving",
-        "key": api_key
+        "travelMode": "DRIVE",
+        "routingPreference": "TRAFFIC_AWARE",
+        "computeAlternativeRoutes": true
+    }
+
+    headers = {
+        'Content-type': 'application/json',
+        "X-Goog-FieldMask": "routes.duration,routes.staticDuration, routes.distanceMeters,routes.polyline.encodedPolyline",
+        "X-Goog-Api-Key": api_key
     }
 
     response = requests.get(url, params=params)
@@ -90,6 +91,7 @@ if __name__ == "__main__":
     print(api_key)
     # print("User's initial location:", user_lat, user_lon) 
     # hotel_list = get_nearby_hotels(user_lat, user_lon)
+    # hotel_names = [hotel["displayName"] for hotel in hotel_list]
 
     get_route_to_hotel(user_lat, user_lon)
 
