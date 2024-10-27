@@ -32,7 +32,9 @@ const RegistrationPage = ({ formValues, setFormValues, handleSubmit }) => {
       </div>
       
       {/* Render the MapComponent here */}
-      <MapComponent />
+      <div className="map-container">
+        <MapComponent />
+      </div>
     </div>
   );
 };

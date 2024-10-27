@@ -1,11 +1,11 @@
 import React from "react";
-import "../App.css";
 
 const SuggestedPage = ({ setOnInfo }) => {
   return (
     <>
       <div className="page-container">
-        <div className="form-container">
+        <h1 className="header">header3</h1>
+        <div className="content-container">
           <button onClick={() => setOnInfo(false)}>go back</button>
         </div>
       </div>

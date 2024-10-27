@@ -1,12 +1,15 @@
 import React from "react";
-import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
 import { Outlet } from "react-router-dom";
+import Header from "../components/Header";
 
 const Layout = () => {
   return (
     <div className="layout">
-      <Header></Header>
-      <Outlet></Outlet>
+      <Sidebar></Sidebar>
+      <div className="main">
+        <Outlet></Outlet>
+      </div>
     </div>
   );
 };

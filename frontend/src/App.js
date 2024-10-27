@@ -6,9 +6,11 @@ import {
   useNavigate,
 } from "react-router-dom";
 import React, { useState } from "react";
-import RegistrationPage from "./pages/RegistrationPage";
+import InfoPage from "./pages/InfoPage";
 import SuggestionPage from "./pages/SuggestionPage";
 import Layout from "./layouts/Layout";
+import RoutePage from "./pages/RoutePage";
+import ChatbotPage from "./pages/ChatbotPage";
 
 function App() {
   // Define initial values for the form
@@ -17,7 +19,6 @@ function App() {
   const [formValues, setFormValues] = useState({
     county: "",
     familySize: "",
-    houseType: "",
     travelMeans: "",
     youngInfants: "",
     childCount: "",
@@ -44,7 +45,7 @@ function App() {
               onInfo ? (
                 <SuggestionPage setOnInfo={setOnInfo}></SuggestionPage>
               ) : (
-                <RegistrationPage
+                <InfoPage
                   formValues={formValues}
                   setFormValues={setFormValues}
                   handleSubmit={handleSubmit}
@@ -52,6 +53,8 @@ function App() {
               )
             }
           />
+          <Route path="/route" element={<RoutePage></RoutePage>} />
+          <Route path="/chatbot" element={<ChatbotPage></ChatbotPage>} />
         </Route>
       </Routes>
     </Router>

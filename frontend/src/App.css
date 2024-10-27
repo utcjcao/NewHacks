@@ -1,50 +1,57 @@
-/* Form Container */
-.form-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
-  gap: 20px; /* Space between fields */
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 900px; /* Limit the form width */
-  margin: 0 auto; /* Center the form horizontally */
-}
+body {
+    font-family: 'Roboto', sans-serif;
+  }
 
-/* Each Input Field */
-.input-field {
+.layout {
   display: flex;
-  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Title for Each Input Field */
-.input-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 5px;
+.layout .sidebar {
+    width: 20%;
+    flex:1;
+    border-right: 1px solid #ddd;
+    background-color: #1E201E;
 }
 
-/* Input and Dropdown Styling */
-.dropdown, .text-input {
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
+.layout .sidebar h1 {
+  margin: 0;
+  color:#ddd;
 }
 
-/* Submit Button Styling */
-.submit-button {
-  grid-column: span 3; /* Make the submit button take up the full width of all 3 columns */
-  padding: 12px 20px;
-  background-color: #007bff;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
+.sidebar ul {
+  list-style-type: none; 
+  padding: 0px;             
+  margin: 0;
+  text-indent: 20px;
+}
+
+
+.sidebar a {
+  text-decoration: none; 
+  color: #ddd; 
+  display: block; 
+  padding:18px;
+}
+
+.sidebar a:hover {
+background-color: grey; 
+}
+
+.main {
+flex: 4; 
+display: flex;
+flex-direction: column;
+gap:10px
+}
+.header {
+display: flex;
+align-items: center; 
+justify-content: space-between;
+padding: 25px;
+border-bottom: 1px solid #ddd;
+margin: 0px;
 }
 
 #map {
@@ -53,6 +60,12 @@
 }
 
 
-.submit-button:hover {
-  background-color: #0056b3;
+.content-container {
+    background-color: #F5F7F8;
+    height: 100vh;
+    padding:40px;
+}
+
+.header h1 {
+margin: 0;
 }

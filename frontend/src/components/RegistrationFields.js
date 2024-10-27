@@ -3,29 +3,9 @@ import * as options from "./options";
 import SelectInput from "./SelectInput";
 
 const RegistrationFields = ({ values, onChange }) => {
-  const [mobileView, setMobileView] = useState(false);
-
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setMobileView(window.innerWidth < 640);
-    };
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-
-    return () => {
-      window.removeEventListener("resize", checkScreenSize);
-    };
-  }, []);
-
   return (
     <>
-      <div
-        className={
-          mobileView
-            ? "max-sm:grid max-sm:grid-cols-1 max-sm:w-full"
-            : "md:grid md:grid-cols-2 md:gap-4"
-        }
-      >
+      <div className="input-container">
         <SelectInput
           id="county"
           name="county"
@@ -52,21 +32,6 @@ const RegistrationFields = ({ values, onChange }) => {
           {options.familySizes.map((size) => (
             <option key={size} value={size}>
               {size}
-            </option>
-          ))}
-        </SelectInput>
-
-        <SelectInput
-          id="houseType"
-          name="houseType"
-          label="House Type"
-          value={values.houseType}
-          onChange={onChange}
-        >
-          <option value="">Select your house type</option>
-          {options.houseTypes.map((type) => (
-            <option key={type} value={type}>
-              {type}
             </option>
           ))}
         </SelectInput>
