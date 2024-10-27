@@ -1,8 +1,8 @@
 import pandas as pd
 
-df_supplies = pd.read_csv('./Corrected_Emergency_Supplies_Checklist_with_Units.csv')
-df_shelters = pd.read_csv('./Shelter_List_with_County.csv')
-df_counties = pd.read_csv('./Florida_All_67_Counties_Evacuation_Zones.csv')
+df_supplies = pd.read_csv('/Users/anishpai/NewHacks/backend/Corrected_Emergency_Supplies_Checklist_with_Units.csv')
+df_shelters = pd.read_csv('/Users/anishpai/NewHacks/backend/Shelter_List_with_County.csv')
+df_counties = pd.read_csv('/Users/anishpai/NewHacks/backend/Florida_All_67_Counties_Evacuation_Zones.csv')
 
 def check_evacuation_info(county):
     """Check if the given county needs to evacuate, return zone and meaning."""
@@ -80,5 +80,3 @@ kids = True
 pets = False
 
 emergency_plan = prepare_emergency_plan(county_info, num_people, kids, pets)
-# print(emergency_plan)
-
