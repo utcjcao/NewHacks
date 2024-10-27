@@ -1,22 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import RegistrationFields from "../components/RegistrationFields";
 import MapComponent from "../components/MapComponent";
 import "./InfoPage.css";
 
 const InfoPage = ({ formValues, setFormValues, handleSubmit }) => {
-  const [locations, setLocations] = useState([
-    { lat: 25.7617, lng: -80.1918, name: "Miami" },
-    { lat: 28.5383, lng: -81.3792, name: "Orlando" },
-    { lat: 27.9506, lng: -82.4572, name: "Tampa" },
-    { lat: 30.3322, lng: -81.6557, name: "Jacksonville" },
-  ]);
+  const [locations, setLocations] = useState([]);
 
-  const handleUpdateLocations = () => {
-    const newLocations = [
-      { lat: 26.1224, lng: -80.1373, name: "Fort Lauderdale" },
-      { lat: 29.6516, lng: -82.3248, name: "Gainesville" },
-    ];
-    setLocations(newLocations);
+  // Fetch initial locations from Flask API
+  useEffect(() => {
+    const fetchInitialLocations = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/api/locations/initial");
+        const data = await response.json();
+        setLocations(data);
+      } catch (error) {
+        console.error("Error fetching initial locations:", error);
+      }
+    };
+
+    fetchInitialLocations();
+  }, []);
+
+  // Fetch updated locations from Flask API
+  const handleUpdateLocations = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/api/locations/updated");
+      const data = await response.json();
+      setLocations(data);
+    } catch (error) {
+      console.error("Error fetching updated locations:", error);
+    }
   };
 
   return (
