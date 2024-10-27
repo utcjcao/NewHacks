@@ -1,5 +1,3 @@
-Here’s a sample README for your GitHub repository, which includes standard sections for explaining the project’s purpose, setup, usage, and contributions. Adjust specifics based on your project's details as needed.
-
 ---
 
 # NewHacks
