@@ -4,14 +4,12 @@ import cohere
 import faiss
 import numpy as np
 import re
-from datascraping import prepare_emergency_plan  # Import the function from your data-scraping script
+from datascraping import prepare_emergency_plan  
 
 app = Flask(__name__)
 
-# Initialize Cohere client and load embeddings
 co = cohere.Client('9U1arTaBk7dBninVJArtzR6oZlQwSfnZXcNnoJga')
 
-# Load JSON vectors and FAISS index
 def load_json_vectors(json_path):
     with open(json_path, 'r') as file:
         data = json.load(file)
@@ -27,7 +25,6 @@ def create_faiss_index(embeddings):
     index.add(embeddings)
     return index
 
-# Load vectors
 json_path = "/Users/anishpai/NewHacks/backend/hurricane_preparedness_vectors.json"
 sections, topics, embeddings = load_json_vectors(json_path)
 index = create_faiss_index(embeddings)
@@ -40,8 +37,7 @@ def retrieve_relevant_section(query, sections, topics, index, embeddings):
     topic = topics[closest_section_idx[0][0]]
     
     sentences = re.split(r'(?<=[.!?])\s+', section_text.strip())
-    limited_text = ' '.join(sentences[:2])  # First two sentences for brevity
-
+    limited_text = ' '.join(sentences[:2])  
     return f"**{topic}:** {limited_text}"
 
 @app.route('/generate_response', methods=['POST'])
@@ -54,10 +50,8 @@ def generate_response():
     kids = data.get("kids", False)
     pets = data.get("pets", False)
 
-    # Generate emergency plan details
     emergency_plan = prepare_emergency_plan(county, num_people, kids, pets)
     
-    # Check for specific queries related to the emergency plan
     if "evacuate" in user_query.lower():
         response = f"You {'need to evacuate' if emergency_plan['Evacuation Needed'] == 'Yes' else 'do not need to evacuate'} in {county}. Zone: {emergency_plan['Evacuation Zone']} ({emergency_plan['Zone Description']})."
     elif "supplies" in user_query.lower() or "bring" in user_query.lower():
@@ -69,7 +63,6 @@ def generate_response():
     elif "distribution" in user_query.lower():
         response = f"Distribution center: {emergency_plan['Distribution Center']}"
     else:
-        # Use RAG (Retrieve and Generate) response for other queries
         response = retrieve_relevant_section(user_query, sections, topics, index, embeddings)
 
     return jsonify({"response": response})
@@ -83,10 +76,8 @@ def retrieve_emergency_plan():
     kids = data.get("kids", False)
     pets = data.get("pets", False)
 
-    # Get the emergency plan
     emergency_plan = prepare_emergency_plan(county, num_people, kids, pets)
     
-    # Convert DataFrame in 'Supplies Checklist' to JSON-serializable format
     emergency_plan["Supplies Checklist"] = emergency_plan["Supplies Checklist"].to_dict(orient="records")
     
     return jsonify(emergency_plan)
