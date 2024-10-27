@@ -17,6 +17,9 @@ const Sidebar = () => {
           <li>
             <Link to="/chatbot">Chatbot</Link>
           </li>
+          <li>
+            <Link to="/stormtrack">Storm Track</Link>
+          </li>
         </ul>
       </nav>
     </div>

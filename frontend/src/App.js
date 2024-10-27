@@ -13,6 +13,7 @@ import RoutePage from "./pages/RoutePage";
 import ChatbotPage from "./pages/ChatbotPage";
 import { io } from "socket.io-client";
 import { FormProvider } from "./components/FormProvider";
+import StormTrackPage from "./pages/StormTrackPage";
 
 function App() {
   // Define initial values for the form
@@ -64,6 +65,10 @@ function App() {
             <Route
               path="/chatbot"
               element={<ChatbotPage socket={socket}></ChatbotPage>}
+            />
+            <Route
+              path="/stormtrack"
+              element={<StormTrackPage></StormTrackPage>}
             />
           </Route>
         </Routes>
