@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import RegistrationFields from "../components/RegistrationFields";
 import * as options from "../components/options"; // Make sure options.js has the counties array
+import MapComponent from "../components/MapComponent";
 import "./InfoPage.css";
 
 const InfoPage = ({ formValues, setFormValues, handleSubmit }) => {
@@ -15,14 +16,22 @@ const InfoPage = ({ formValues, setFormValues, handleSubmit }) => {
   };
 
   return (
-    <div className="page-container">
-      <h1 className="header">header1</h1>
-      <form className="content-container" onSubmit={handleSubmit}>
-        <RegistrationFields values={formValues} onChange={handleChange} />
-        <button type="submit" className="submit-button">
-          Submit
-        </button>
-      </form>
+    <div>
+
+      <div className="page-container">
+        <div className="form-container">
+          <h2>Emergency Response Information</h2>
+          <form onSubmit={handleSubmit}>
+            <RegistrationFields values={formValues} onChange={(e) => setFormValues({ ...formValues, [e.target.name]: e.target.value })} />
+            <button type="submit" className="submit-button">Submit</button>
+          </form>
+        </div>
+        
+        {/* Render the MapComponent here */}
+        <div className="map-container">
+          <MapComponent />
+        </div>
+      </div>
     </div>
   );
 };

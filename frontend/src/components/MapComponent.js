@@ -1,7 +1,7 @@
 // MapComponent.js
 import React, { useEffect, useRef } from 'react';
 
-const MapComponent = ({ height = "500px", width = "60%" }) => {
+const MapComponent = ({ height = "700px", width = "500px" }) => {
   const mapRef = useRef(null);
 
   useEffect(() => {
@@ -9,7 +9,7 @@ const MapComponent = ({ height = "500px", width = "60%" }) => {
     const loadGoogleMapsScript = () => {
       if (!window.google) {
         const script = document.createElement("script");
-        script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&v=weekly`;
+        script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDn4wygzwCJA-9QDihCAmXo2KMkrVJNC-Q&v=weekly`;
         script.async = true;
         script.defer = true;
         document.body.appendChild(script);
@@ -25,7 +25,7 @@ const MapComponent = ({ height = "500px", width = "60%" }) => {
       if (mapRef.current && window.google) {
         new window.google.maps.Map(mapRef.current, {
           center: { lat: 27.994402, lng: -81.760254 }, // Centered on Florida
-          zoom: 8,
+          zoom: 7,
         });
       }
     };
