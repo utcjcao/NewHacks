@@ -14,37 +14,20 @@ const InfoPage = ({ setOnInfo, socket }) => {
 
     setOnInfo(true);
   };
-  const [locations, setLocations] = useState([]);
 
-  // Fetch initial locations from Flask API
-  useEffect(() => {
-    const fetchInitialLocations = async () => {
-      try {
-        const response = await fetch(
-          "http://localhost:5000/api/locations/initial"
-        );
-        const data = await response.json();
-        setLocations(data);
-      } catch (error) {
-        console.error("Error fetching initial locations:", error);
-      }
-    };
+  const [locations, setLocations] = useState([
+    { lat: 28.602198676663033, lng:  -80.81752273354974, name: "Current Location" }
+  ]);
 
-    fetchInitialLocations();
-  }, []);
-
-  // Fetch updated locations from Flask API
-  const handleUpdateLocations = async () => {
-    try {
-      const response = await fetch(
-        "http://localhost:5000/api/locations/updated"
-      );
-      const data = await response.json();
-      setLocations(data);
-    } catch (error) {
-      console.error("Error fetching updated locations:", error);
-    }
+  const handleUpdateLocations = () => {
+    const newLocations = [
+      { lat: 28.602198676663033, lng:  -80.81752273354974, name: "Current Location" },
+      { lat: 28.3387085, lng: -80.60774289999999, name: "Hilton Cocoa Beach Oceanfront" },
+      { lat: 28.395608499999998, lng: -80.6124337, name: "Radisson Resort at the Port" },
+    ];
+    setLocations(newLocations);
   };
+
 
   return (
     <div>
