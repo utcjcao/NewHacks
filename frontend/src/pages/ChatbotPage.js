@@ -20,7 +20,6 @@ const ChatbotPage = ({ socket, formValues }) => {
 
   const handleSend = async () => {
     if (!query.trim()) return;
-    console.log("helloooo");
 
     const userMessage = { ...formValues, user_query: query, sender: "user" };
     setMessages((prevMessages) => [...prevMessages, userMessage]);

@@ -90,8 +90,8 @@ def retrieve_emergency_plan(data):
     
     # Convert DataFrame in 'Supplies Checklist' to JSON-serializable format
     emergency_plan["Supplies Checklist"] = emergency_plan["Supplies Checklist"].to_dict(orient="records")
-    
-    socketio.emit('recieve-emergency-plan', jsonify(emergency_plan)) 
+    print(emergency_plan)
+    socketio.emit('recieve-emergency-plan', emergency_plan) 
 
 
 if __name__ == "__main__":

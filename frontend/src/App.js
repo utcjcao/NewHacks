@@ -27,6 +27,21 @@ function App() {
     pets: "",
     petCount: "",
   });
+  const [items, setItems] = useState({});
+
+  useEffect(() => {
+    console.log("touch");
+    if (socket == null) return;
+    console.log("touc2");
+    const handler_code = (newItems) => {
+      setItems(newItems);
+      console.log("hello");
+    };
+    socket.on("recieve-emergency-plan", handler_code);
+    return () => {
+      socket.off("recieve-emergency-plan", handler_code);
+    };
+  }, [socket]);
 
   useEffect(() => {
     const s = io("http://localhost:5000");
@@ -47,7 +62,7 @@ function App() {
               onInfo ? (
                 <SuggestionPage
                   setOnInfo={setOnInfo}
-                  socket={socket}
+                  items={items}
                 ></SuggestionPage>
               ) : (
                 <InfoPage
