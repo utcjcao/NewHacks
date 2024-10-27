@@ -9,6 +9,8 @@ import React, { useState } from "react";
 import InfoPage from "./pages/InfoPage";
 import SuggestionPage from "./pages/SuggestionPage";
 import Layout from "./layouts/Layout";
+import RoutePage from "./pages/RoutePage";
+import ChatbotPage from "./pages/ChatbotPage";
 
 function App() {
   // Define initial values for the form
@@ -51,6 +53,8 @@ function App() {
               )
             }
           />
+          <Route path="/route" element={<RoutePage></RoutePage>} />
+          <Route path="/chatbot" element={<ChatbotPage></ChatbotPage>} />
         </Route>
       </Routes>
     </Router>

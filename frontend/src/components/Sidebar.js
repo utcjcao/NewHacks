@@ -11,10 +11,10 @@ const Sidebar = () => {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/feature1">Feature 1</a>
+            <a href="/route">Route Planner</a>
           </li>
           <li>
-            <a href="/feature2">Feature 2</a>
+            <a href="/chatbot">Chatbot</a>
           </li>
         </ul>
       </nav>
