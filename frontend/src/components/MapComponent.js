@@ -1,87 +1,78 @@
-// MapComponent.js
-import React, { useEffect, useRef, useImperativeHandle, forwardRef } from 'react';
-import MarkerService from '../services/MarkerService';
-import useAddMarker from '../hooks/useAddMarker';
+import React, { useEffect, useRef } from 'react';
+import { loadGoogleMapsScript } from '../utils/LoadGoogleMapsScript';
 
-const MapComponent = forwardRef(({ height = "700px", width = "500px", mapId = "YOUR_MAP_ID" }, ref) => {
+const MapComponent = ({ height = "700px", width = "500px", mapId = "YOUR_MAP_ID", locations = [] }) => {
   const mapRef = useRef(null);
-  const markerServiceRef = useRef(null);
+  const googleMapRef = useRef(null);
+  const markersRef = useRef([]); // Store markers in a ref to manage adding/removing them
 
   useEffect(() => {
-    // Function to load Google Maps and initialize the map and markers
-    const loadGoogleMapsScript = () => {
-      if (!window.google) {
-        const script = document.createElement("script");
-        script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDn4wygzwCJA-9QDihCAmXo2KMkrVJNC-Q&v=weekly`;
-        script.async = true;
-        script.defer = true;
-        document.body.appendChild(script);
-        script.onload = initializeMap;
-      } else {
-        initializeMap();
-      }
-    };
-
-    // Function to initialize the map and AdvancedMarkerElement
     const initializeMap = async () => {
-      if (mapRef.current && window.google) {
-        // Load the required libraries from Google Maps
-        const { Map } = await window.google.maps.importLibrary("maps");
-        const { AdvancedMarkerElement } = await window.google.maps.importLibrary("marker");
+      try {
+        const google = await loadGoogleMapsScript(); // Wait for Google Maps script to load
+        const { Map } = await google.maps.importLibrary("maps");
+        const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-        // Initialize the map centered on a specific location
-        const map = new Map(mapRef.current, {
-          center: { lat: 27.994402, lng: -81.760254 }, // Centered on Florida
-          zoom: 7,
-          mapId: mapId,
-        });
+        if (mapRef.current) {
+          googleMapRef.current = new Map(mapRef.current, {
+            center: { lat: 27.994402, lng: -81.760254 }, // Centered on Florida
+            zoom: 7,
+            mapId: mapId,
+          });
 
-        // Initialize MarkerService with the map instance
-        markerServiceRef.current = new MarkerService(map);
-
-        // Example: Adding an initial marker using AdvancedMarkerElement
-        const initialPosition =  { lat: 27.994402, lng: -81.760254 }; // Uluru, Australia as an example
-        new AdvancedMarkerElement({
-          map: map,
-          position: initialPosition,
-          title: "Uluru",
-        });
+          // Add initial markers based on the locations prop
+          updateMarkers(locations, AdvancedMarkerElement);
+        }
+      } catch (error) {
+        console.error("Error loading Google Maps API:", error);
       }
     };
 
-    loadGoogleMapsScript();
+    initializeMap();
   }, [mapId]);
 
-  // Expose addMarker function to parent components
-  useImperativeHandle(ref, () => ({
-    addMarker: (lat, lng, options = {}) => {
-      if (markerServiceRef.current) {
-        // Use the markerService to add the marker and center the map
-        const marker = markerServiceRef.current.addMarker({ lat, lng }, options);
-        
-        // Center and zoom in on the new marker location
-        markerServiceRef.current.map.setCenter({ lat, lng });
-        markerServiceRef.current.map.setZoom(12);
+  // Function to add markers using AdvancedMarkerElement
+  const updateMarkers = async (locations) => {
+    const { AdvancedMarkerElement } = await window.google.maps.importLibrary("marker");
 
-        return marker;
-      } else {
-        console.error("MarkerService is not initialized.");
-      }
-    },
-  }));
+    // Clear existing markers
+    markersRef.current.forEach(marker => marker.setMap(null));
+    markersRef.current = [];
+
+    // Add new markers
+    locations.forEach(({ lat, lng, name }) => {
+      const marker = new AdvancedMarkerElement({
+        map: googleMapRef.current,
+        position: { lat, lng },
+        title: name,
+      });
+      markersRef.current.push(marker); // Store each new marker in the ref array
+    });
+
+    // Center the map on the first location if it exists
+    if (locations.length > 0) {
+      googleMapRef.current.setCenter({ lat: locations[0].lat, lng: locations[0].lng });
+      googleMapRef.current.setZoom(8);
+    }
+  };
+
+  // Watch for changes to locations prop and update markers
+  useEffect(() => {
+    if (googleMapRef.current && window.google) {
+      updateMarkers(locations);
+    }
+  }, [locations]);
 
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <div
-        ref={mapRef}
-        style={{
-          height: height,
-          width: width,
-          border: "1px solid #ddd"
-        }}
-      />
-    </div>
+    <div
+      ref={mapRef}
+      style={{
+        height: height,
+        width: width,
+        border: "1px solid #ddd"
+      }}
+    />
   );
-});
+};
 
 export default MapComponent;
