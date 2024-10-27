@@ -66,7 +66,7 @@ def prepare_emergency_plan(county, num_people, kids=False, pets=False):
         "Evacuation Zone": evacuation_zone,
         "Zone Description": zone_description,
         "Supplies Checklist": adjusted_supplies,
-        "Emergency Contact Website": emergency_website,
+        "County Website": emergency_website,
         "Distribution Center": distribution_center,
         "Shelters": shelters
     }

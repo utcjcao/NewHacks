@@ -1,0 +1,452 @@
+[
+    {
+        "topic": "Storm Category Levels",
+        "content": "Category 1 storms have winds of 74-95 mph and may cause minor damage to roofs, siding, and trees. Category 5 storms, with winds above 157 mph, can destroy framed homes, shatter windows, and leave areas uninhabitable for weeks or months."
+    },
+    {
+        "topic": "Hurricane Watch",
+        "content": "A Hurricane Watch is issued 48 hours before possible hurricane conditions. This is a signal to review your hurricane preparedness plan, secure your property, and ensure your emergency supplies are ready."
+    },
+    {
+        "topic": "Hurricane Warning",
+        "content": "A Hurricane Warning means hurricane conditions are expected within 36 hours. Immediate action to protect life and property is necessary. Complete your preparations and be ready to shelter or evacuate as needed."
+    },
+    {
+        "topic": "Storm Surge",
+        "content": "Storm surge is a dangerous rise in sea level due to a storm, leading to significant coastal flooding. It can cause fatalities and massive property damage; evacuation is advised in areas predicted to experience a storm surge."
+    },
+    {
+        "topic": "Evacuation Orders",
+        "content": "Evacuation is mandatory for residents in Zone A and other zones as directed. Failure to evacuate could result in being stranded without emergency support during severe weather conditions."
+    },
+    {
+        "topic": "Evacuation Zone Finder",
+        "content": "Visit sjcemergencymanagement.com to determine your specific evacuation zone. This will inform whether you need to evacuate during an emergency based on your location and storm forecast."
+    },
+    {
+        "topic": "Pet Shelter Regulations",
+        "content": "Pet-friendly shelters are available but require pets to be in crates or carriers. Owners should bring pet food, water, medications, and essential items for pet comfort."
+    },
+    {
+        "topic": "Evacuation Transportation",
+        "content": "St. Johns County offers transport to shelters for those who need assistance. Pre-registration is required; more information can be found at sjcemergencymanagement.com."
+    },
+    {
+        "topic": "General Shelter Requirements",
+        "content": "Shelters do not provide beds or linens. Bring personal bedding, clothing, snacks, and essential personal items for comfort and hygiene."
+    },
+    {
+        "topic": "Medical Needs Shelters",
+        "content": "Special shelters for those with medical needs requiring electricity or specialized care. Pre-registration is necessary to ensure accommodations are available during an emergency."
+    },
+    {
+        "topic": "Emergency Kit Basics",
+        "content": "An emergency kit should include at least 1 gallon of water per person per day, a 3-day supply of non-perishable food, medications, and essential documents."
+    },
+    {
+        "topic": "Pet Emergency Kit",
+        "content": "A pet emergency kit includes a 7-day supply of food and water, medications, ID tags, and a carrier or crate. Include any additional items specific to your pet's needs."
+    },
+    {
+        "topic": "Vehicle Preparation",
+        "content": "Protect your vehicle by parking it in a garage or away from trees. Ensure the gas tank is full, and remove or secure any loose items that could be blown away."
+    },
+    {
+        "topic": "Roof Inspection",
+        "content": "Inspect your roof for loose shingles or damage before hurricane season. Professional inspections and repairs can reduce the risk of further damage during storms."
+    },
+    {
+        "topic": "Window Protection",
+        "content": "Install hurricane shutters or plywood over windows. Duct tape is not effective for protection and should not be relied upon during a storm."
+    },
+    {
+        "topic": "Insurance Review",
+        "content": "Review your homeowner\u2019s insurance policy to ensure adequate coverage for hurricane damage, including wind and flood insurance as applicable."
+    },
+    {
+        "topic": "Flood Insurance",
+        "content": "Standard homeowner\u2019s insurance does not cover flooding. Consider purchasing a separate flood insurance policy if you are in a high-risk area."
+    },
+    {
+        "topic": "Generator Safety",
+        "content": "Use generators outdoors, away from windows to prevent carbon monoxide poisoning. Install a CO detector for added safety during power outages."
+    },
+    {
+        "topic": "Document Security",
+        "content": "Store critical documents like IDs, insurance, and bank records in a waterproof container to prevent loss or damage during a storm."
+    },
+    {
+        "topic": "Financial Assistance Options",
+        "content": "FEMA provides disaster relief to qualified applicants. For assistance, call 1-800-621-3362 or visit DisasterAssistance.gov."
+    },
+    {
+        "topic": "Price Gouging Law",
+        "content": "Florida law prohibits price increases on essential items during emergencies. Report suspected gouging via the No Scam app or by calling 1-866-9-NO-SCAM."
+    },
+    {
+        "topic": "Tree Service Scams",
+        "content": "After a storm, check that tree removal companies are licensed. Avoid paying in full upfront and verify their reputation to avoid scams."
+    },
+    {
+        "topic": "Assignment of Benefits (AOB)",
+        "content": "Assignment of Benefits allows contractors to file insurance claims on your behalf. Review any agreement thoroughly to understand your rights."
+    },
+    {
+        "topic": "Charity Scams",
+        "content": "Donate only to established charities after a disaster. Verify a charity\u2019s legitimacy through the Florida Department of Agriculture's website or Better Business Bureau."
+    },
+    {
+        "topic": "Business Continuity Planning",
+        "content": "75% of unprepared businesses fail post-disaster. Create a business continuity plan to ensure business resilience during and after storms."
+    },
+    {
+        "topic": "Emergency Alerts",
+        "content": "Sign up for Alert St. Johns or NOAA weather updates for real-time emergency alerts and storm information."
+    },
+    {
+        "topic": "Mosquito Control",
+        "content": "Post-storm, mosquito populations increase. Report concerns to local authorities, such as St. Johns County Mosquito Control, at 904-471-3107."
+    },
+    {
+        "topic": "Disaster Distress Helpline",
+        "content": "For mental health support related to disasters, contact the Disaster Distress Helpline at 1-800-985-5990, available 24/7."
+    },
+    {
+        "topic": "Returning Home After Evacuation",
+        "content": "Bring valid ID for reentry to evacuated areas. Avoid flood waters, downed power lines, and follow local guidance on safe reentry practices."
+    },
+    {
+        "topic": "Shelter Supply Checklist",
+        "content": "Bring non-perishable food, necessary medications, bedding, and entertainment items for comfort if staying at an emergency shelter."
+    },    
+    {
+        "topic": "Flood Zones",
+        "content": "Check if your home is in a designated flood zone using local government tools or websites. Flood-prone areas may face mandatory evacuations, and insurance policies often exclude flood damage, requiring separate flood insurance."
+    },
+    {
+        "topic": "Difference Between Watch and Warning",
+        "content": "A Hurricane Watch signifies possible hurricane conditions within 48 hours, prompting initial preparation. A Hurricane Warning indicates that conditions are expected within 36 hours, necessitating final preparations and sheltering actions."
+    },
+    {
+        "topic": "Food Storage Recommendations",
+        "content": "Stock non-perishable foods such as canned beans, pasta, nuts, and dried fruits in waterproof containers. A 7-day supply is recommended, focusing on high-energy and easy-to-prepare foods."
+    },
+    {
+        "topic": "Water Filtration",
+        "content": "In case of contaminated water, a portable water filter can ensure safe drinking water. Boiling water is also effective, though backup filters are recommended for long-term situations."
+    },
+    {
+        "topic": "Protecting Outdoor Furniture",
+        "content": "Secure or store outdoor furniture, grills, and gardening tools to prevent them from becoming airborne hazards. Tie down larger items and cover them with waterproof tarps."
+    },
+    {
+        "topic": "Basement Flooding Protection",
+        "content": "To protect basements, install sump pumps and check for window seals. Sandbags can divert water flow, and regular maintenance reduces the risk of interior flooding."
+    },
+    {
+        "topic": "Household Electrical Safety",
+        "content": "Use surge protectors for appliances and unplug unnecessary electronics. During a storm, turning off your main breaker can help prevent electrical fires and damage."
+    },
+    {
+        "topic": "Staying Connected During a Storm",
+        "content": "Keep mobile devices charged and ready. Backup battery packs or solar chargers can extend usage if power outages persist. Maintain an emergency contact list in hard copy."
+    },
+    {
+        "topic": "Vehicle Safety in Floods",
+        "content": "Avoid driving through floodwaters as vehicles can be swept away in 6 inches of water. If evacuation is needed, follow recommended routes and avoid low-lying roads."
+    },
+    {
+        "topic": "Tarp Usage for Roof Protection",
+        "content": "Heavy-duty tarps can cover roof damage temporarily. Secure with nails and straps post-storm until permanent repairs can be made. Check for safety hazards before accessing the roof."
+    },
+    {
+        "topic": "Family Emergency Plan",
+        "content": "Create an emergency plan with designated meeting places and contacts. Share evacuation plans with family and discuss emergency roles for a coordinated response."
+    },
+    {
+        "topic": "Local Evacuation Routes",
+        "content": "Identify local evacuation routes ahead of hurricane season. Keep a physical map in your emergency kit, as GPS may not be reliable during power outages."
+    },
+    {
+        "topic": "Building Fortifications",
+        "content": "Fortify your home with reinforced doors, hurricane shutters, and bolted-down roofing materials to withstand high winds and debris impact."
+    },
+    {
+        "topic": "First Aid Kit Essentials",
+        "content": "A comprehensive first aid kit should include antiseptics, bandages, pain relievers, and emergency medications. Customize based on household needs."
+    },
+    {
+        "topic": "Personal Hygiene in Emergencies",
+        "content": "Pack hygiene essentials like hand sanitizers, wet wipes, and garbage bags. Improvised washing and waste disposal methods may be necessary if utilities are unavailable."
+    },
+    {
+        "topic": "Cash Access During Power Outages",
+        "content": "Have enough cash in small denominations, as ATMs and credit systems may be down. Plan for a week’s worth of expenses, including fuel and food."
+    },
+    {
+        "topic": "Mental Health Preparedness",
+        "content": "Long periods without power and limited mobility can cause stress. Include games, books, and comforting items in your kit to support emotional well-being."
+    },
+    {
+        "topic": "Storm Shutters Installation",
+        "content": "Consider permanent hurricane shutters for maximum protection. If unavailable, pre-cut plywood boards are effective in shielding windows and glass doors."
+    },
+    {
+        "topic": "Tree Trimming",
+        "content": "Trim trees and remove dead branches near the home to reduce the risk of damage from falling limbs. Schedule regular maintenance outside of storm season."
+    },
+    {
+        "topic": "Garage Door Bracing",
+        "content": "Reinforce garage doors, which are particularly vulnerable to high winds. Metal braces or retrofit kits can prevent blowouts and structural damage."
+    },
+    {
+        "topic": "Power Outage Readiness",
+        "content": "Have flashlights, lanterns, and extra batteries ready for extended power outages. Avoid candles due to fire risks, especially if children or pets are present."
+    },
+    {
+        "topic": "Medication Preparation",
+        "content": "Refill prescriptions and keep a 2-week supply of necessary medications. Store them in waterproof bags, and consider backup options for medical devices."
+    },
+    {
+        "topic": "Important Document Safety",
+        "content": "Store copies of IDs, insurance, and financial records in a waterproof and fireproof safe. Consider digital backups on secure, offline storage devices."
+    },
+    {
+        "topic": "Flood Barriers",
+        "content": "Install or have sandbags, barriers, or water-absorbent barriers ready for high-risk areas, particularly near entry points like doors and garages."
+    },
+    {
+        "topic": "Preparing Mobile Homes",
+        "content": "Mobile homes are extremely vulnerable; consider evacuating early. Secure loose items, and know that shelters are available for mobile home residents."
+    },
+    {
+        "topic": "Chain of Command in Emergencies",
+        "content": "FEMA, state, and local authorities manage disaster responses. Follow official guidance and only return home when authorities declare it safe."
+    },
+    {
+        "topic": "Evacuation Registration",
+        "content": "If you need evacuation assistance, register early with local emergency services to ensure your needs are accounted for."
+    },
+    {
+        "topic": "Water Conservation",
+        "content": "During power outages, conserve water by using it sparingly. Fill bathtubs and large containers with water ahead of the storm for hygiene and drinking."
+    },
+    {
+        "topic": "Battery and Solar Chargers",
+        "content": "Solar chargers and large battery banks are valuable backups for keeping devices charged during extended outages."
+    },
+    {
+        "topic": "Avoiding Carbon Monoxide Poisoning",
+        "content": "Operate generators and grills outdoors, away from windows. Carbon monoxide detectors are essential for safety during power outages."
+    },
+    {
+        "topic": "Pet Shelter Rules",
+        "content": "Pet-friendly shelters require pets to be crated, with a supply of food, water, and any medication. Check local regulations for pet accommodations."
+    },
+    {
+        "topic": "Senior and Disabled Evacuation Plans",
+        "content": "Ensure a plan is in place for elderly or disabled family members who may need extra time or medical support. Contact local authorities for assistance options."
+    },
+    {
+        "topic": "Weatherproofing Doors",
+        "content": "Install weatherproofing strips and sweeps on exterior doors to reduce water entry. Simple seals can help protect the home from minor flooding."
+    },
+    {
+        "topic": "Insurance Riders for High-Risk Items",
+        "content": "High-value items like art and jewelry may need additional insurance coverage. Review policies for any high-risk items that are essential or irreplaceable."
+    },
+    {
+        "topic": "Emergency Contact Cards",
+        "content": "Each family member should have an emergency contact card with phone numbers, addresses, and medical information. This is helpful if separated."
+    },
+    {
+        "topic": "Handling Debris Cleanup",
+        "content": "Post-storm debris poses hazards. Use protective gear, and wait for local guidance on disposal to avoid injuries and environmental issues."
+    },
+    {
+        "topic": "Swimming Pool Protection",
+        "content": "Lower water levels slightly, but do not drain completely. Secure pool furniture and chemical containers to prevent contamination."
+    },
+    {
+        "topic": "Protecting Indoor Plants",
+        "content": "Move plants away from windows and seal them in bags or tubs to minimize water loss. Indoor humidity changes can impact plant health."
+    },
+    {
+        "topic": "Using Local Resources for Updates",
+        "content": "Local emergency management sites and social media channels provide real-time updates on shelter openings and supply availability."
+    },
+    {
+        "topic": "Preparing Gas Lines and Appliances",
+        "content": "Turn off gas at the main valve before evacuating to prevent leaks. Have an inspector check appliances if your home floods."
+    },
+    {
+        "topic": "Waterproofing Electrical Boxes",
+        "content": "Cover outdoor electrical boxes with waterproof covers. This simple measure can prevent potential hazards and water damage to the system."
+    },
+
+{
+    "topic": "Waterproofing Electrical Boxes",
+    "content": "Cover outdoor electrical boxes with waterproof covers. This measure prevents potential hazards and protects your electrical system from water damage."
+},
+{
+    "topic": "Protecting Important Contacts",
+    "content": "Write down important contacts like insurance providers, local emergency services, and family members. Keep a physical copy in your emergency kit."
+},
+{
+    "topic": "Backup for Essential Electronics",
+    "content": "For essential devices such as medical equipment, consider backup batteries or generators. Rechargeable power banks also help extend usage."
+},
+{
+    "topic": "Sanitation Supplies",
+    "content": "Pack hand sanitizer, wipes, toilet paper, and garbage bags for waste management and personal hygiene during extended outages or evacuation."
+},
+{
+    "topic": "Children's Activities",
+    "content": "Pack books, puzzles, and other quiet activities for children. Familiar toys can provide comfort during the uncertainty of a storm."
+},
+{
+    "topic": "Evacuation Route Awareness",
+    "content": "Know your evacuation routes and have an alternate plan in case of road closures. Traffic congestion is common, so allow extra time."
+},
+{
+    "topic": "Health and Medical Supply Checklist",
+    "content": "Pack a 14-day supply of prescription medications, first-aid items, and any specialized medical equipment needed for family members."
+},
+{
+    "topic": "Reducing Window Breakage Risks",
+    "content": "Use hurricane shutters or impact-resistant windows to minimize breakage. If unavailable, pre-cut plywood can serve as a temporary barrier."
+},
+{
+    "topic": "Caring for the Elderly During Evacuations",
+    "content": "For elderly family members, arrange for mobility aids and a list of medications. Include comfort items and emergency contacts in their kit."
+},
+{
+    "topic": "Boiling Water Advisory",
+    "content": "After a storm, local advisories may require boiling water for safety. Boil for at least one minute to kill bacteria and other contaminants."
+},
+{
+    "topic": "Avoiding Power Line Hazards",
+    "content": "After a storm, stay clear of downed power lines. Report hazards to local authorities and treat all lines as live for safety."
+},
+{
+    "topic": "Reporting Price Gouging",
+    "content": "Report excessive pricing of essentials during emergencies to local authorities or the No Scam hotline at 1-866-9-NO-SCAM."
+},
+{
+    "topic": "Weatherproofing AC Units",
+    "content": "Secure air conditioning units and cover them to prevent damage from wind or water. Portable units should be moved indoors."
+},
+{
+    "topic": "Emergency Radio Frequencies",
+    "content": "Know local emergency radio frequencies and NOAA weather alerts. Battery-operated or hand-crank radios are essential in power outages."
+},
+{
+    "topic": "Hazardous Material Safety",
+    "content": "Secure hazardous materials like gasoline, cleaning agents, and fertilizers. Move them to safe areas to prevent spills or contamination."
+},
+{
+    "topic": "Recovery and Cleanup Tools",
+    "content": "Equip your home with gloves, shovels, and heavy-duty bags for debris removal. Face masks are also useful for dusty environments post-storm."
+},
+{
+    "topic": "Preventing Mold Growth",
+    "content": "After flooding, dry out areas within 48 hours to prevent mold. Dehumidifiers and fans help, and affected items should be removed promptly."
+},
+{
+    "topic": "Mosquito Control Tips",
+    "content": "Eliminate standing water to control mosquito breeding. Mosquito repellent and protective clothing are recommended post-storm."
+},
+{
+    "topic": "Emergency Health Contact List",
+    "content": "Have contact information for local hospitals, urgent care centers, and poison control in your emergency kit for quick access."
+},
+{
+    "topic": "Personal Comfort Kit",
+    "content": "Pack personal hygiene items, eyeglasses, and a change of clothes. Comfort items like a blanket or pillow may be helpful in shelters."
+},
+{
+    "topic": "Septic System Precautions",
+    "content": "Heavy rainfall can overload septic systems. Limit water usage and inspect for signs of failure to avoid contamination and backups."
+},
+{
+    "topic": "Securing Light Fixtures",
+    "content": "Check outdoor lighting fixtures for stability. If they are loose or damaged, remove them to prevent them from becoming airborne."
+},
+{
+    "topic": "Keeping Food Safe During Outages",
+    "content": "Fill freezers with ice and keep them closed to maintain low temperatures. Use coolers as an additional measure if power outages are extended."
+},
+{
+    "topic": "Sheltering in Place Tips",
+    "content": "If sheltering in place, identify a safe room away from windows. Stock it with essential supplies and a first-aid kit in case you can’t leave for a while."
+},
+{
+    "topic": "Avoiding Overcrowded Shelters",
+    "content": "If possible, avoid peak shelter times to reduce exposure to crowded spaces. Check for shelter availability updates before heading out."
+},
+{
+    "topic": "Pool Safety During Storms",
+    "content": "Do not drain the pool, as it may pop out due to hydrostatic pressure. Lower the water slightly and turn off power to pool equipment."
+},
+{
+    "topic": "Reducing Roof Damage",
+    "content": "Check for loose shingles and trim branches that overhang the roof. Securing roofing materials helps reduce potential damage."
+},
+{
+    "topic": "Preparing for Cold Weather",
+    "content": "Some hurricanes bring unexpected cold weather. Pack blankets, layers, and space heaters if there’s a risk of post-storm cold fronts."
+},
+{
+    "topic": "Emergency Blankets",
+    "content": "Mylar or thermal blankets are lightweight and conserve body heat, making them valuable in cold or emergency situations."
+},
+{
+    "topic": "Accessing Financial Aid",
+    "content": "After a disaster, apply for FEMA assistance or SBA loans for repairs. Financial institutions may offer deferred payments for affected areas."
+},
+{
+    "topic": "Household Inventory",
+    "content": "Create a household inventory with photos and item descriptions. This aids in filing insurance claims if belongings are damaged or lost."
+},
+{
+    "topic": "Avoiding Debris Piles",
+    "content": "Debris can conceal hazardous items. Only remove debris after assessing for potential hazards like nails, glass, and sharp objects."
+},
+{
+    "topic": "Shutting Off Gas Safely",
+    "content": "If you smell gas, shut off the main valve and avoid using any open flames. Contact your gas company for assistance before turning it back on."
+},
+{
+    "topic": "First Responders Contact",
+    "content": "Know the non-emergency contact number for local first responders. Reserve 911 for life-threatening emergencies during disasters."
+},
+{
+    "topic": "Protecting Family Photos",
+    "content": "Store irreplaceable photos and documents in a waterproof, fireproof safe. Digital backups can be a reliable alternative."
+},
+{
+    "topic": "Managing Anxiety During Storms",
+    "content": "Keep informed but limit exposure to stressful media coverage. Practice breathing exercises and keep family members calm with activities."
+},
+{
+    "topic": "Local Disaster Support Centers",
+    "content": "After a storm, find local support centers for food, water, and medical care. Emergency management websites often provide locations."
+},
+{
+    "topic": "Weatherproofing Skylights",
+    "content": "Skylights are vulnerable during storms. Use protective coverings to reduce the chance of breakage and secure any loose parts."
+},
+{
+    "topic": "Avoiding Stray Animals",
+    "content": "Storms can displace animals. Avoid unfamiliar or aggressive animals, and contact local animal control for help with strays."
+},
+{
+    "topic": "Saving Power on Devices",
+    "content": "Switch to battery-saving mode on phones and turn off non-essential features. Limit device use to conserve power during outages."
+},
+{
+    "topic": "Monitoring News from Officials",
+    "content": "Get reliable information from local officials or FEMA channels. Avoid unofficial sources to prevent misinformation."
+}
+]
+
