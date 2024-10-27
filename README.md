@@ -2,7 +2,7 @@
 
 # Guardian
 
-Welcome to our **NewHacks** project! This repository contains code and resources for a project developed as part of NewHacks, focusing on [brief description of project objective and purpose, e.g., "a storm-tracking application that visualizes weather data"]. The project is designed using React for the frontend and Flask for backend services, integrating the Google Maps API for interactive map-based data visualization.
+Welcome to our NewHacks project! This repository contains code and resources for a project developed as part of NewHacks, focusing on The Guardian, a hurricane preparedness and storm-tracking application that consolidates critical information, real-time tracking, and resource guidance in emergencies. The project uses React for the frontend and Python-based backend services, integrating the Google Maps API for interactive, map-based data visualization and safe route navigation.
 
 ## Table of Contents
 - [Project Overview](#project-overview)
