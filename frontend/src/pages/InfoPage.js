@@ -1,9 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useEffect } from "react";
 import RegistrationFields from "../components/RegistrationFields";
 import MapComponent from "../components/MapComponent";
 import "./InfoPage.css";
+const InfoPage = ({ setOnInfo, socket, formValues, setFormValues }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (socket) {
+      socket.emit("generate-emergency-plan", formValues);
+    }
 
-const InfoPage = ({ formValues, setFormValues, handleSubmit }) => {
+    setOnInfo(true);
+  };
   const [locations, setLocations] = useState([]);
 
   // Fetch initial locations from Flask API
